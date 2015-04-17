@@ -1,0 +1,917 @@
+{
+    "children": [
+        {
+            "name": "CBS",
+            "children": [
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Extraordinary Measures",
+                            "Gross": 15.14
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Faster",
+                            "Gross": 35.626
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "The Back-up Plan",
+                            "Gross": 77.477
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Crest",
+            "children": [
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Alpha and Omega",
+                            "Gross": 50.507
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Disney",
+            "children": [
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "Alice in Wonderland",
+                            "Gross": 1025.466
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Prince of Persia: The Sands of Time",
+                            "Gross": 336.365
+                        },
+                        {
+                            "name": "The Sorcerer's Apprentice",
+                            "Gross": 215.28
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Tangled",
+                            "Gross": 591.794
+                        },
+                        {
+                            "name": "Toy Story 3",
+                            "Gross": 1063.16
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "The Last Song",
+                            "Gross": 89.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "When in Rome",
+                            "Gross": 43.04
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Fox",
+            "children": [
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Black Swan",
+                            "Gross": 329.397
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Date Night",
+                            "Gross": 152.263
+                        },
+                        {
+                            "name": "Gulliver's Travels",
+                            "Gross": 237.382
+                        },
+                        {
+                            "name": "Just Wright",
+                            "Gross": 21.569
+                        },
+                        {
+                            "name": "Love & Other Drugs",
+                            "Gross": 102.802
+                        },
+                        {
+                            "name": "Marmaduke",
+                            "Gross": 83.757
+                        },
+                        {
+                            "name": "Tooth Fairy",
+                            "Gross": 112.46
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Knight and Day",
+                            "Gross": 261.927
+                        },
+                        {
+                            "name": "Percy Jackson & the Olympians: The Lightning Thief",
+                            "Gross": 226.5
+                        },
+                        {
+                            "name": "Predators",
+                            "Gross": 127.232
+                        },
+                        {
+                            "name": "The A-Team",
+                            "Gross": 177.236
+                        },
+                        {
+                            "name": "Unstoppable",
+                            "Gross": 167.802
+                        }
+                    ]
+                },
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "The Chronicles of Narnia: The Voyage of the Dawn Treader",
+                            "Gross": 415.685
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Highlight Communications",
+            "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Resident Evil: Afterlife",
+                            "Gross": 296.22
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Independent",
+            "children": [
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "127 Hours",
+                            "Gross": 60.73
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "All About Steve",
+                            "Gross": 40.12
+                        },
+                        {
+                            "name": "City Island",
+                            "Gross": 7.874
+                        },
+                        {
+                            "name": "Cyrus",
+                            "Gross": 9.92
+                        },
+                        {
+                            "name": "Death at a Funeral",
+                            "Gross": 49.05
+                        },
+                        {
+                            "name": "Diary of a Wimpy Kid",
+                            "Gross": 75.7
+                        },
+                        {
+                            "name": "Greenberg",
+                            "Gross": 6.15
+                        },
+                        {
+                            "name": "Grown Ups",
+                            "Gross": 271.43
+                        },
+                        {
+                            "name": "I Love You Phillip Morris",
+                            "Gross": 20.722
+                        },
+                        {
+                            "name": "Life as We Know It",
+                            "Gross": 53.374
+                        },
+                        {
+                            "name": "Little Fockers",
+                            "Gross": 310.649
+                        },
+                        {
+                            "name": "Morning Glory",
+                            "Gross": 60.039
+                        },
+                        {
+                            "name": "Our Family Wedding",
+                            "Gross": 21.413
+                        },
+                        {
+                            "name": "Solitary Man",
+                            "Gross": 5.178
+                        },
+                        {
+                            "name": "The Joneses",
+                            "Gross": 1.97
+                        },
+                        {
+                            "name": "The Kids Are All Right",
+                            "Gross": 34.704
+                        },
+                        {
+                            "name": "The Switch",
+                            "Gross": 49.831
+                        },
+                        {
+                            "name": "Vampires Suck",
+                            "Gross": 80.546
+                        },
+                        {
+                            "name": "You Again",
+                            "Gross": 32.003
+                        },
+                        {
+                            "name": "You Will Meet a Tall Dark Stranger",
+                            "Gross": 34.267
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Brooklyn's Finest",
+                            "Gross": 36.439
+                        },
+                        {
+                            "name": "Cats & Dogs: The Revenge of Kitty Galore",
+                            "Gross": 112.49
+                        },
+                        {
+                            "name": "From Paris with Love",
+                            "Gross": 52.829
+                        },
+                        {
+                            "name": "Kick-Ass",
+                            "Gross": 96.188
+                        },
+                        {
+                            "name": "Legion",
+                            "Gross": 67.92
+                        },
+                        {
+                            "name": "MacGruber",
+                            "Gross": 9.327
+                        },
+                        {
+                            "name": "Machete",
+                            "Gross": 44.089
+                        },
+                        {
+                            "name": "Skyline",
+                            "Gross": 66.817
+                        },
+                        {
+                            "name": "The Book of Eli",
+                            "Gross": 157.107
+                        },
+                        {
+                            "name": "The Expendables",
+                            "Gross": 274.469
+                        },
+                        {
+                            "name": "Tron: Legacy",
+                            "Gross": 400.062
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Buried",
+                            "Gross": 19.148
+                        },
+                        {
+                            "name": "For Colored Girls",
+                            "Gross": 55.049
+                        },
+                        {
+                            "name": "Never Let Me Go",
+                            "Gross": 9.45
+                        },
+                        {
+                            "name": "Stone",
+                            "Gross": 9.479
+                        },
+                        {
+                            "name": "The Last Exorcism",
+                            "Gross": 67.733
+                        },
+                        {
+                            "name": "Wall Street: Money Never Sleeps",
+                            "Gross": 134.743
+                        },
+                        {
+                            "name": "Winter's Bone",
+                            "Gross": 13.831
+                        }
+                    ]
+                },
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "Case 39",
+                            "Gross": 28.19
+                        },
+                        {
+                            "name": "Devil",
+                            "Gross": 62.694
+                        }
+                    ]
+                },
+                {
+                    "name": "Biography",
+                    "children": [
+                        {
+                            "name": "Conviction",
+                            "Gross": 9.71
+                        },
+                        {
+                            "name": "The King's Speech",
+                            "Gross": 414.204
+                        },
+                        {
+                            "name": "The Runaways",
+                            "Gross": 4.677
+                        }
+                    ]
+                },
+                {
+                    "name": "Crime",
+                    "children": [
+                        {
+                            "name": "Saw 3-D",
+                            "Gross": 136.15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Liberty Starz",
+            "children": [
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "The Crazies",
+                            "Gross": 54.803
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Lionsgate",
+            "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Daybreakers",
+                            "Gross": 51.41
+                        },
+                        {
+                            "name": "Killers",
+                            "Gross": 98.16
+                        }
+                    ]
+                },
+                {
+                    "name": "Crime",
+                    "children": [
+                        {
+                            "name": "The Next Three Days",
+                            "Gross": 67.45
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Why Did I Get Married Too?",
+                            "Gross": 60.67
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MGM",
+            "children": [
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "Hot Tub Time Machine",
+                            "Gross": 64.571
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Paramount",
+            "children": [
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Burlesque",
+                            "Gross": 89.519
+                        },
+                        {
+                            "name": "Shutter Island",
+                            "Gross": 294.802
+                        },
+                        {
+                            "name": "The Fighter",
+                            "Gross": 129.154
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Dinner for Schmucks",
+                            "Gross": 86.855
+                        },
+                        {
+                            "name": "She's Out of My League",
+                            "Gross": 49.778
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "How to Train Your Dragon",
+                            "Gross": 494.88
+                        },
+                        {
+                            "name": "Megamind",
+                            "Gross": 321.884
+                        },
+                        {
+                            "name": "Shrek Forever After",
+                            "Gross": 752.604
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Iron Man 2",
+                            "Gross": 623.93
+                        },
+                        {
+                            "name": "The Last Airbender",
+                            "Gross": 319.713
+                        }
+                    ]
+                },
+                {
+                    "name": "Documentary",
+                    "children": [
+                        {
+                            "name": "Jackass 3-D",
+                            "Gross": 171.685
+                        }
+                    ]
+                },
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "Paranormal Activity 2",
+                            "Gross": 177.511
+                        }
+                    ]
+                },
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "True Grit",
+                            "Gross": 252.273
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Relativity Media",
+            "children": [
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "My Soul to Take",
+                            "Gross": 20.971
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "The Spy Next Door",
+                            "Gross": 45.239
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sony",
+            "children": [
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Country Strong",
+                            "Gross": 20.528
+                        },
+                        {
+                            "name": "Dear John",
+                            "Gross": 114.97
+                        },
+                        {
+                            "name": "Eat Pray Love",
+                            "Gross": 204.59
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Easy A",
+                            "Gross": 74.95
+                        },
+                        {
+                            "name": "Please Give",
+                            "Gross": 4.309
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Salt",
+                            "Gross": 293.502
+                        },
+                        {
+                            "name": "Takers",
+                            "Gross": 69.05
+                        },
+                        {
+                            "name": "The Bounty Hunter",
+                            "Gross": 136.333
+                        },
+                        {
+                            "name": "The Karate Kid",
+                            "Gross": 359.12
+                        },
+                        {
+                            "name": "The Other Guys",
+                            "Gross": 170.431
+                        }
+                    ]
+                },
+                {
+                    "name": "Biography",
+                    "children": [
+                        {
+                            "name": "The Social Network",
+                            "Gross": 224.919
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "The Tourist",
+                            "Gross": 278.346
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Summit",
+            "children": [
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Furry Vengeance",
+                            "Gross": 36.236
+                        },
+                        {
+                            "name": "Letters to Juliet",
+                            "Gross": 79.179
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Red",
+                            "Gross": 199.006
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Remember Me",
+                            "Gross": 56.034
+                        },
+                        {
+                            "name": "Step Up 3D",
+                            "Gross": 159.291
+                        },
+                        {
+                            "name": "The Twilight Saga: Eclipse",
+                            "Gross": 698.489
+                        }
+                    ]
+                },
+                {
+                    "name": "Mystery",
+                    "children": [
+                        {
+                            "name": "The Ghost Writer",
+                            "Gross": 60.22
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "The Weinstein Company",
+            "children": [
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Piranha 3-D",
+                            "Gross": 83.188
+                        },
+                        {
+                            "name": "Youth in Revolt",
+                            "Gross": 19.649
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Universal",
+            "children": [
+                {
+                    "name": "Fantasy",
+                    "children": [
+                        {
+                            "name": "Charlie St. Cloud",
+                            "Gross": 48.188
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Despicable Me",
+                            "Gross": 543.113
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Get Him to the Greek",
+                            "Gross": 91.257
+                        },
+                        {
+                            "name": "Leap Year",
+                            "Gross": 32.608
+                        },
+                        {
+                            "name": "Nanny McPhee Returns",
+                            "Gross": 93.24
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Green Zone",
+                            "Gross": 94.878
+                        },
+                        {
+                            "name": "Repo Men",
+                            "Gross": 18.41
+                        },
+                        {
+                            "name": "Robin Hood",
+                            "Gross": 321.669
+                        },
+                        {
+                            "name": "Scott Pilgrim vs. the World",
+                            "Gross": 47.66
+                        }
+                    ]
+                },
+                {
+                    "name": "Crime",
+                    "children": [
+                        {
+                            "name": "The American",
+                            "Gross": 67.875
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "The Wolfman",
+                            "Gross": 139.79
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Warner Bros.",
+            "children": [
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "A Nightmare on Elm Street",
+                            "Gross": 115.67
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Clash of the Titans",
+                            "Gross": 493.214
+                        },
+                        {
+                            "name": "Cop Out",
+                            "Gross": 55.588
+                        },
+                        {
+                            "name": "Inception",
+                            "Gross": 825.536
+                        },
+                        {
+                            "name": "Jonah Hex",
+                            "Gross": 10.91
+                        },
+                        {
+                            "name": "The Losers",
+                            "Gross": 29.38
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Due Date",
+                            "Gross": 211.78
+                        },
+                        {
+                            "name": "Going the Distance",
+                            "Gross": 42.05
+                        },
+                        {
+                            "name": "Sex and the City 2",
+                            "Gross": 288.347
+                        },
+                        {
+                            "name": "Valentine's Day",
+                            "Gross": 216.485
+                        },
+                        {
+                            "name": "Yogi Bear",
+                            "Gross": 201.584
+                        }
+                    ]
+                },
+                {
+                    "name": "Crime",
+                    "children": [
+                        {
+                            "name": "Edge of Darkness",
+                            "Gross": 81.12
+                        },
+                        {
+                            "name": "The Town",
+                            "Gross": 154.025
+                        }
+                    ]
+                },
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "Harry Potter and the Deathly Hallows Part 1",
+                            "Gross": 959.3
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Legend of the Guardians: The Owls of Ga'Hoole",
+                            "Gross": 140.073
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,668 @@
+{
+    "children": [
+        {
+            "name": "Disney",
+            "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Pirates of the Caribbean: At World's End",
+                            "Gross": 963.42
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "National Treasure: Book of Secrets",
+                            "Gross": 457.36
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Ratatouille",
+                            "Gross": 623.72
+                        },
+                        {
+                            "name": "Meet the Robinsons",
+                            "Gross": 169.33
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Wild Hogs",
+                            "Gross": 253.62
+                        },
+                        {
+                            "name": "Enchanted",
+                            "Gross": 340.49
+                        },
+                        {
+                            "name": "The Game Plan",
+                            "Gross": 147.88
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Fox",
+            "children": [
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Alvin and the Chipmunks",
+                            "Gross": 361.34
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "The Simpsons Movie",
+                            "Gross": 527.07
+                        },
+                        {
+                            "name": "Juno",
+                            "Gross": 231.41
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Live Free or Die Hard",
+                            "Gross": 383.53
+                        },
+                        {
+                            "name": "Fantastic Four: Rise of the Silver Surfer",
+                            "Gross": 289.05
+                        },
+                        {
+                            "name": "Hitman",
+                            "Gross": 99.97
+                        },
+                        {
+                            "name": "Pathfinder: Legend of the Ghost Warrior",
+                            "Gross": 30.82
+                        }
+                    ]
+                },
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "Alien vs. Predator -- Requiem",
+                            "Gross": 128.88
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "The Darjeeling Limited",
+                            "Gross": 35.08
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Independent",
+            "children": [
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "Saw IV",
+                            "Gross": 139.35
+                        },
+                        {
+                            "name": "30 Days of Night",
+                            "Gross": 75.5
+                        },
+                        {
+                            "name": "The Hills Have Eyes 2",
+                            "Gross": 37.47
+                        }
+                    ]
+                },
+                {
+                    "name": "Musical",
+                    "children": [
+                        {
+                            "name": "Stomp the Yard",
+                            "Gross": 75.51
+                        }
+                    ]
+                },
+                {
+                    "name": "Romance",
+                    "children": [
+                        {
+                            "name": "Tyler Perry's Why Did I get Married",
+                            "Gross": 55.86
+                        },
+                        {
+                            "name": "P.S. I Love You",
+                            "Gross": 156.83
+                        },
+                        {
+                            "name": "Across the Universe",
+                            "Gross": 29.37
+                        },
+                        {
+                            "name": "Waitress",
+                            "Gross": 22.18
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "Michael Clayton",
+                            "Gross": 92.99
+                        },
+                        {
+                            "name": "Nancy Drew",
+                            "Gross": 30.67
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Epic Movie",
+                            "Gross": 86.87
+                        }
+                    ]
+                },
+                {
+                    "name": "Fantasy",
+                    "children": [
+                        {
+                            "name": "Mr. Magorium's Wonder Emporium",
+                            "Gross": 69.47
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Lions for Lambs",
+                            "Gross": 63.22
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Lionsgate",
+            "children": [
+                {
+                    "name": "Western",
+                    "children": [
+                        {
+                            "name": "3:10 to Yuma",
+                            "Gross": 70.02
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Good Luck Chuck",
+                            "Gross": 59.19
+                        }
+                    ]
+                },
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "Hostel: Part II",
+                            "Gross": 35.62
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Happily N'Ever After",
+                            "Gross": 38.09
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Mediaplex",
+            "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Dragon Wars (aka D-War)",
+                            "Gross": 75.11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MGM",
+            "children": [
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "Mr. Brooks",
+                            "Gross": 48.12
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Paramount",
+            "children": [
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Shrek the Third",
+                            "Gross": 798.96
+                        },
+                        {
+                            "name": "Bee Movie",
+                            "Gross": 287.59
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Transformers",
+                            "Gross": 709.71
+                        },
+                        {
+                            "name": "Beowulf",
+                            "Gross": 196.39
+                        },
+                        {
+                            "name": "Shooter",
+                            "Gross": 95.7
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Blades of Glory",
+                            "Gross": 145.71
+                        },
+                        {
+                            "name": "Norbit",
+                            "Gross": 159.31
+                        },
+                        {
+                            "name": "The Heartbreak Kid",
+                            "Gross": 127.77
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "Disturbia",
+                            "Gross": 117.76
+                        },
+                        {
+                            "name": "Zodiac",
+                            "Gross": 84.79
+                        },
+                        {
+                            "name": "Next",
+                            "Gross": 76.07
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "No Country for Old Men",
+                            "Gross": 171.63
+                        },
+                        {
+                            "name": "There Will Be Blood",
+                            "Gross": 76.18
+                        },
+                        {
+                            "name": "Into the Wild",
+                            "Gross": 56.25
+                        },
+                        {
+                            "name": "The Kite Runner",
+                            "Gross": 73.28
+                        }
+                    ]
+                },
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "Stardust",
+                            "Gross": 135.56
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sony",
+            "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Spider-Man 3",
+                            "Gross": 890.87
+                        },
+                        {
+                            "name": "Ghost Rider",
+                            "Gross": 228.74
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Superbad",
+                            "Gross": 169.87
+                        },
+                        {
+                            "name": "Vacancy",
+                            "Gross": 35.3
+                        },
+                        {
+                            "name": "Walk Hard: The Dewey Cox Story",
+                            "Gross": 20.58
+                        },
+                        {
+                            "name": "Daddy Day Camp",
+                            "Gross": 18.2
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Surf's Up",
+                            "Gross": 149.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Premonition",
+                            "Gross": 84.15
+                        },
+                        {
+                            "name": "We Own the Night",
+                            "Gross": 54.93
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "The Weinstein Company",
+            "children": [
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "Halloween",
+                            "Gross": 80.25
+                        },
+                        {
+                            "name": "The Mist",
+                            "Gross": 57.29
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "The Nanny Diaries",
+                            "Gross": 47.74
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Grindhouse",
+                            "Gross": 25.42
+                        }
+                    ]
+                },
+                {
+                    "name": "Documentary",
+                    "children": [
+                        {
+                            "name": "Sicko",
+                            "Gross": 36.09
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Universal",
+            "children": [
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "The Bourne Ultimatum",
+                            "Gross": 442.82
+                        },
+                        {
+                            "name": "American Gangster",
+                            "Gross": 266.46
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Knocked Up",
+                            "Gross": 219.08
+                        },
+                        {
+                            "name": "I Now Pronounce You Chuck and Larry",
+                            "Gross": 186.07
+                        },
+                        {
+                            "name": "Evan Almighty",
+                            "Gross": 173.42
+                        }
+                    ]
+                },
+                {
+                    "name": "Biography",
+                    "children": [
+                        {
+                            "name": "Charlie Wilson's War",
+                            "Gross": 119
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "The Kingdom",
+                            "Gross": 86.66
+                        },
+                        {
+                            "name": "Smokin' Aces",
+                            "Gross": 57.1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Warner Bros.",
+            "children": [
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "Harry Potter and the Order of the Phoenix",
+                            "Gross": 939.89
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "I Am Legend",
+                            "Gross": 585.35
+                        },
+                        {
+                            "name": "Ocean's 13",
+                            "Gross": 311.31
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "300",
+                            "Gross": 456.07
+                        },
+                        {
+                            "name": "Rush Hour 3",
+                            "Gross": 258.02
+                        },
+                        {
+                            "name": "The Golden Compass",
+                            "Gross": 372.23
+                        },
+                        {
+                            "name": "TMNT",
+                            "Gross": 95.61
+                        },
+                        {
+                            "name": "The Brave One",
+                            "Gross": 69.79
+                        },
+                        {
+                            "name": "Shoot 'Em Up",
+                            "Gross": 26.82
+                        }
+                    ]
+                },
+                {
+                    "name": "Musical",
+                    "children": [
+                        {
+                            "name": "Hairspray",
+                            "Gross": 202.55
+                        },
+                        {
+                            "name": "Sweeney Todd: The Demon Barber of Fleet Street",
+                            "Gross": 152.52
+                        }
+                    ]
+                },
+                {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "The Bucket List",
+                            "Gross": 175.37
+                        }
+                    ]
+                },
+                {
+                    "name": "Romance",
+                    "children": [
+                        {
+                            "name": "Music and Lyrics",
+                            "Gross": 145.9
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "License to Wed",
+                            "Gross": 69.31
+                        },
+                        {
+                            "name": "No Reservations",
+                            "Gross": 92.6
+                        },
+                        {
+                            "name": "In the Land of Women",
+                            "Gross": 17.56
+                        }
+                    ]
+                },
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "The Reaping",
+                            "Gross": 62.77
+                        }
+                    ]
+                },
+                {
+                    "name": "Sci-Fi",
+                    "children": [
+                        {
+                            "name": "The Invasion",
+                            "Gross": 40.17
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
