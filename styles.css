@@ -1,0 +1,121 @@
+html, body {
+/*    background-color: black;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+/*  color: white;*/
+}
+h1{
+
+  font-size: 5em;
+}
+h2{
+  font-size: 2em;
+}
+h4{
+  font-size: 1em;
+}
+#container
+{
+  background-color: black;
+  color: white;
+  padding-bottom: 10px;
+}
+
+#main {
+  width: 100%;
+  height: 960;
+  overflow: auto;
+}
+/*
+#sidebar {
+  float: right;
+  width: 100px;
+}
+
+#sequence {
+  width: 600px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}*/
+
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #fff;
+}
+
+#chart {
+  position: relative;
+    margin: auto;
+}
+
+#chart path {
+  stroke: #fff;
+
+}
+#years{
+   float: left;
+
+
+ }
+
+#explanation {
+  position: absolute;
+  color: #666;
+  margin-top: 450px;
+  width: 100%;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+#name {
+  font-size: 1.5em;
+}
+
+
+
+    
+    footer {
+        font-family: 'Arial', sans-serif;
+        background-color: black;
+  }
+    footer a {
+      color: white; 
+      font-size: 2rem;
+      font-weight: 300; 
+      text-decoration: none;
+    }
+
+    footer ul {
+      margin: 0;
+      background-color: black;
+      display: inline-block;
+    }
+    footer li {
+      display: inline-block;
+      padding: 25px 25px;
+      list-style-type: none;
+    }
+    ul li a {
+      background: #000;
+      text-decoration: none;
+    }
+
+    ul li a:hover{
+      border-bottom: solid #fff;
+    }
+
+  footer .selected{
+    border-bottom: solid #fff;
+
+  }
+ 
+
+
