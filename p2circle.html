@@ -40,8 +40,43 @@
       function load_data (filename) {
       var width = 960, height = 960, radius = 400;
 
-      var color = d3.scale.ordinal().range(["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",'#ccc','#26527C','#61D7A4','#6CAC2B','#408AD2','#218359','#36D792','#679ED2','#B0F26D','#4B9500','#98F23D','#04396C','#007241']);
-
+	  var color_domain = ["Aardman Animations","Buena Vista","CBS","Columbia",
+						"Crest","Disney","DreamWorks","Focus",
+						"Fox", "Happy Madison","Highlight Communications",
+						"Independent", "Legendary Pictures","Liberty Starz","Lionsgate",
+						"Mediaplex", "MGM","Miramax","Morgan Creek Productions","New Line",
+						"New Line Cinema", "Overture","Paramount","Pixar",
+						"Regency Enterprises", "Relativity Media","Reliance Entertainment","Sony",
+						"Spyglass Entertainment", "Summit","The Weinstein Company","Universal",
+						"Vertigo Entertainment", "Village Roadshow Pictures","Virgin","Warner Bros.",
+						
+						"Action","Adventure","Animation","Biography","Biopic",
+						"Comedy","Crime","Documentary","Drama",
+						"Fantasy","Genre","Horror","Musical",
+						"Mystery","Romance","Sci-Fi","Thriller",
+						"Western"];
+						
+	  var color_range = ["#1f77b4","#aec7e8","#ff7f0e","#ffbb78",
+						"#2ca02c","#98df8a","#d62728","#ff9896",
+						"#9467bd","#c5b0d5","#8c564b","#c49c94",
+						"#e377c2","#f7b6d2","#7f7f7f","#c7c7c7",
+						"#bcbd22","#dbdb8d","#17becf","#9edae5",
+						"#9edae5","#393b79","#5254a3","#6b6ecf",
+						"#9c9ede","#637939","#8ca252","#b5cf6b",
+						"#cedb9c","#8c6d31","#bd9e39","#e7ba52",
+						"#e7cb94","#843c39","#ad494a","#d6616b",
+						
+						"#EBEB99","#E6E6E6","#CCCCCC","#B2B2B2","#B2B2B2",
+						"#999999","#808080","#666666","#4D4D4D",
+						"#333333","#191919","#FFFFB2","#FFFF66",
+						"#FFFF19","#B2B200","#808000","#4C4C00",
+						"#1A1A00"];
+						
+	  var random_color = d3.scale.ordinal().range( ["#331433", "#662966", "#993D99", "#CC52CC"] );
+		
+	  var color = d3.scale.ordinal().domain(color_domain)
+									.range(color_range);
+	
       var svg = d3.select("#chart").append("svg")
       .attr("width", width)
       .attr("height", height)
@@ -126,7 +161,15 @@
         .attr("d", arc)
         .attr("class", function(d) { return (d.children ? d : d.parent).name; })
         .style("stroke", "#fff")
-        .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+        .style("fill", function(d) { //return color((d.children ? d : d.parent).name); })
+			var the_name = ((d.children ? d : d.parent).name);
+			if(color_domain.indexOf(the_name) > -1) {
+				return color(the_name);
+			}
+			else {
+				return random_color(the_name);
+			}
+		})
         .style("fill-rule", "evenodd")
         .on("mouseover", mouseover);
 
