@@ -208,14 +208,8 @@
     function change_data (year) {
     d3.select("svg").remove();
     load_data(year + ".csv");
-   $("#2011").removeClass("selected");
-        $("#2010").removeClass("selected");
-             $("#2009").removeClass("selected");
-                  $("#2008").removeClass("selected");
-                       $("#2007").removeClass("selected");
-
-     $("#"+year).addClass("selected");
-     
+    $("a").removeClass("selected");
+    $("#"+year).addClass("selected");
     console.log(year);
     }
     change_data(2011);
