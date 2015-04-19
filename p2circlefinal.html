@@ -20,9 +20,6 @@
     <!-- Top Containter -->
     <div id ="container">
       <h1><div id = "title"></div></h1>
-      <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
-      <h4>Our Story</h4>
-      <p>The chart below displays the amount of </p>
     </div>
 
     <div id="sidebar">
@@ -47,7 +44,7 @@
 // Function to load sunburst diagram
 function load_data (filename) {
   // SVG dimenstions
-  var width = 960, height = 960, radius = 400;
+  var width = 780, height = 800, radius = 380;
   
   // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
   var b = {
@@ -87,8 +84,6 @@ function load_data (filename) {
           "#FFFF19","#B2B200","#808000","#4C4C00",
           "#1A1A00"];
 
-
-
   function colorObj(){
   var color;
   for(var i = 0; i < color_range.length; i++){
@@ -112,7 +107,7 @@ function load_data (filename) {
     .attr("width", width)
     .attr("height", height)
     .append("svg:g")
-    .attr("id", "cjart")
+    .attr("id", "container")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 
@@ -163,91 +158,76 @@ function load_data (filename) {
 
     d3.select("#container").on("mouseleave", mouseleave);
     totalSize = path.node().__data__.value;
+// Fade all but the current sequence, and show it in the breadcrumb trail.
+function mouseover(d) {
 
-
-    function mouseover(d) {
-
-      var percentage = (100 * d.value / totalSize).toPrecision(3);
-      var percentageString = percentage + "%";
-      if (percentage < 0.1) {
-      percentageString = "< 0.1%";
-      }
-
-      d3.select("#percentage")
-        .text(percentageString);
-
-      d3.select("#explanation")
-        .style("visibility", "");
-
-      d3.select("#name")
-        .text(d.name);
-
-      // Fade all the segments.
-      d3.selectAll("path")
-        .style("opacity", 0.3);
-
-      d3.select(this).style("opacity", "1")
-
-    // Then highlight only those that are an ancestor of the current segment.
-    // svg.selectAll("path")
-    //     .filter(function(node) {
-    //               return ;
-    //             })
-    //     .style("opacity", 1);
-
-      var sequenceArray = getAncestors(d);
-      updateBreadcrumbs(sequenceArray, percentageString);
-
-      // Fade all the segments.
-      d3.selectAll("path")
-          .style("opacity", 0.3);
-
-      // Then highlight only those that are an ancestor of the current segment.
-      vis.selectAll("path")
-          .filter(function(node) {
-                    return (sequenceArray.indexOf(node) >= 0);
-                  })
-          .style("opacity", 1);
+  var percentage = (100 * d.value / totalSize).toPrecision(3);
+  var percentageString = percentage + "%";
+  if (percentage < 0.1) {
+    percentageString = "< 0.1%";
   }
 
-  d3.select("#chart").on("mouseleave", mouseleave);
-  function mouseleave(d) {
+  d3.select("#percentage")
+      .text(percentageString);
 
-           // Hide the breadcrumb trail
-    d3.select("#trail")
-        .style("visibility", "hidden");
+  d3.select("#explanation")
+      .style("visibility", "");
 
-    // Deactivate all segments during transition.
-    d3.selectAll("path").on("mouseover", null);
+  var sequenceArray = getAncestors(d);
+  updateBreadcrumbs(sequenceArray, percentageString);
 
-      // Deactivate all segments during transition.
-      // d3.selectAll("path").on("mouseover", null);
+  // Fade all the segments.
+  d3.selectAll("path")
+      .style("opacity", 0.3);
 
-      // Transition each segment to full opacity and then reactivate it.
-    d3.selectAll("path")
-        .transition()
-        .duration(500)
-        .style("opacity", 1);
+  // Then highlight only those that are an ancestor of the current segment.
+  vis.selectAll("path")
+      .filter(function(node) {
+                return (sequenceArray.indexOf(node) >= 0);
+              })
+      .style("opacity", 1);
+}
 
-    d3.select("#explanation")
-        .style("visibility", "hidden");
+
+ function mouseleave(d) {
+
+  // Hide the breadcrumb trail
+  d3.select("#trail")
+      .style("visibility", "hidden");
+
+  // Deactivate all segments during transition.
+  d3.selectAll("path").on("mouseover", null);
+
+  // Transition each segment to full opacity and then reactivate it.
+  d3.selectAll("path")
+      .transition()
+      .duration(1000)
+      .style("opacity", 1)
+      .each("end", function() {
+              d3.select(this).on("mouseover", mouseover);
+            });
+
+  d3.select("#explanation")
+      .style("visibility", "hidden");
+}
+
+ // helper function click to handle mouseleave events/animations
+  function click(d) {
+    // Deactivate all segments then retransition each segment to full opacity.
+    svg.selectAll("path").on("mouseover", null);
+    svg.selectAll("path")
+      .transition()
+      .duration(1000)
+      .attr("opacity", 1)
+      .each("end", function() {
+        d3.select(this).on("mouseover", mouseover);
+      });
+
+    // hide summary and breadcrumbs if visible
+      d3.select("#trail").style("visibility", "hidden");
+      d3.select("#explanation").style("visibility", "hidden");
   }
 
-      //   .on("mouseover", function(d) {
-      // d3.select(this).style("opacity", ".8")
-    
-      //     div.transition()    
-      //         .duration(200)    
-      //         .style("fill", "blue")
-      //         .style("opacity", 1)  
-     
-      
-      // .on("mouseout", function(d) {
-      // d3.select(this).style("opacity", 1);
-      //     div.transition()    
-      //         .duration(500)    
-      //         .style("opacity", 1); 
-      // });
 
 // Given a node in a partition layout, return an array of all of its ancestor
 // nodes, highest first, but excluding the root.
@@ -412,6 +392,12 @@ function toggleLegend() {
       <li><a id="2007" class="" onclick = change_data(2007)>2007</a></li> 
     </ul>           
 </div> 
+ <div id ="container">
+      <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
+      <h4>Our Story</h4>
+      <p>The chart below displays the amount of </p>
+</div>
+
  
 </body>
 </html>
