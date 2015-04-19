@@ -19,7 +19,7 @@
    
     <!-- Top Containter -->
     <div id ="container">
-       <h1>Success of Movies</h1>
+      <h1><div id = "title"></div></h1>
       <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
       <h4>Our Story</h4>
       <p>The chart below displays the amount of </p>
@@ -433,6 +433,8 @@ function toggleLegend() {
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
       console.log(year);
+      document.getElementById('title').innerHTML = "Movies of " + year;
+
     }
     change_data(2011);
     
