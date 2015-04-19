@@ -25,9 +25,7 @@
       <p>The chart below displays the amount of </p>
     </div>
 
-    <div id="sidebar">
-      <div id="legend"></div>
-    </div>
+  
 
     <!-- Visualization Container -->
     <div id="main">
@@ -38,6 +36,9 @@
           <span id="name"></span><br/>
         </div>
       </div>
+
+
+      <div id="legend"></div>
          <div id="sequence"></div>
     </div>
     
@@ -112,9 +113,8 @@ console.log(colorObj());
     .attr("width", width)
     .attr("height", height)
     .append("svg:g")
-    .attr("id", "cjart")
+    .attr("id", "chart")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
 
   var partition = d3.layout.partition()
     .sort(null)
@@ -173,9 +173,8 @@ console.log(colorObj());
   //calls function from above
   var preppedData = genJSON(data, ['Studio', 'Genre', 'Film'])
   // console.log(JSON.stringify(preppedData));
-   
-  initializeBreadcrumbTrail();
   drawLegend();
+  sequenceTrail();
 
   var div = d3.select("body").append("div") 
     .attr("class", "tooltip")       
@@ -235,7 +234,8 @@ console.log(colorObj());
     //     .style("opacity", 1);
 
       var sequenceArray = getAncestors(d);
-      updateBreadcrumbs(sequenceArray, percentageString);
+      updateTrial(sequenceArray, percentageString);
+
 
       // Fade all the segments.
       d3.selectAll("path")
@@ -300,20 +300,22 @@ console.log(colorObj());
     return path;
   }
 
-function initializeBreadcrumbTrail() {
-  // Add the svg area.
+// Initiate the sequence trail chart
+function sequenceTrail() {
+  // Add the svg area for the trial.
   var trail = d3.select("#sequence").append("svg:svg")
       .attr("width", width)
       .attr("height", 50)
       .attr("id", "trail");
-  // Add the label at the end, for the percentage.
+
+  // Add the percentage label at the end
   trail.append("svg:text")
     .attr("id", "endlabel")
     .style("fill", "#000");
 }
 
-// Generate a string that describes the points of a breadcrumb polygon.
-function breadcrumbPoints(d, i) {
+// describes the polygon shape of the trial
+function trailPoints(d, i) {
   var points = [];
   points.push("0,0");
   points.push(b.w + ",0");
@@ -326,19 +328,20 @@ function breadcrumbPoints(d, i) {
   return points.join(" ");
 }
 
-// Update the breadcrumb trail to show the current sequence and percentage.
-function updateBreadcrumbs(nodeArray, percentageString) {
+// Update the trail to show the current sequence and percentage.
+function updateTrial(nodeArray, percentageString) {
 
   // Data join; key function combines name and depth (= position in sequence).
   var g = d3.select("#trail")
       .selectAll("g")
       .data(nodeArray, function(d) { return d.name + d.depth; });
 
-  // Add breadcrumb and label for entering nodes.
+  // add trial and label for entering nodes.
   var entering = g.enter().append("svg:g");
 
+  // creates the polygon through trailPoints function
   entering.append("svg:polygon")
-      .attr("points", breadcrumbPoints)
+      .attr("points", trailPoints)
       .style("fill", function(d) { 
         var the_name = ((d.children ? d : d.parent).name);
         if(color_domain.indexOf(the_name) > -1) {
@@ -348,7 +351,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
           return random_color(the_name);
         }
       })
-
+  // add text of the trail
   entering.append("svg:text")
       .attr("x", (b.w + b.t) / 2)
       .attr("y", b.h / 2)
@@ -372,7 +375,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
       .attr("text-anchor", "middle")
       .text(percentageString);
 
-  // Make the breadcrumb trail visible, if it's hidden.
+  // Allow breadcrumb trail visible, if it's hidden.
   d3.select("#trail")
       .style("visibility", "");
 
@@ -387,7 +390,8 @@ function drawLegend() {
 
   var legend = d3.select("#legend").append("svg:svg")
       .attr("width", li.w)
-      .attr("height", 36 * (li.h + li.s));
+      .attr("height", 10 * (li.h + li.s))
+      .attr("id", "legend");
 
   var g = legend.selectAll("g")
       .data(d3.entries(colors))
@@ -411,16 +415,6 @@ function drawLegend() {
       .text(function(d) { return d.key; });
 }
 
-function toggleLegend() {
-  var legend = d3.select("#legend");
-  if (legend.style("visibility") == "hidden") {
-    legend.style("visibility", "");
-  } else {
-    legend.style("visibility", "hidden");
-  }
-}
-
-
       });
       
       
@@ -428,6 +422,7 @@ function toggleLegend() {
     
     function change_data (year) {
       d3.select("svg").remove();
+      d3.select("#legend").remove();
       load_data(year + ".csv");
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
