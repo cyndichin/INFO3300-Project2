@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Script Libraries -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="underscore-min.js" type="text/javascript"></script>
+    <script src="underscore.string.min.js" type="text/javascript"></script>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <title>Success of Movies</title>
+  </head>
+  <body>
+   
+    <!-- Top Containter -->
+    <div id ="container">
+       <h1>Success of Movies</h1>
+      <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
+      <h4>Our Story</h4>
+      <p>The chart below displays the amount of </p>
+    </div>
+
+    <div id="sidebar">
+      <div id="legend"></div>
+    </div>
+
+    <!-- Visualization Container -->
+    <div id="main">
+      <div id="chart">
+        <div id="explanation" style="visibility: hidden;">
+          <span id="percentage"></span><br/>
+          of profits for <br/>
+          <span id="name"></span><br/>
+        </div>
+      </div>
+         <div id="sequence"></div>
+    </div>
+    
+<!-- Javascript starts -->
+<script>
+
+// Function to load sunburst diagram
+function load_data (filename) {
+  // SVG dimenstions
+  var width = 960, height = 960, radius = 400;
+  
+  // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
+  var b = {
+    w: 250, h: 40, s: 3, t: 10
+  };
+
+  //Colors
+  var color_domain = ["Aardman Animations","Buena Vista","CBS","Columbia",
+					"Crest","Disney","DreamWorks","Focus",
+					"Fox", "Happy Madison","Highlight Communications",
+					"Independent", "Legendary Pictures","Liberty Starz","Lionsgate",
+					"Mediaplex", "MGM","Miramax","Morgan Creek Productions","New Line",
+					"New Line Cinema", "Overture","Paramount","Pixar",
+					"Regency Enterprises", "Relativity Media","Reliance Entertainment","Sony",
+					"Spyglass Entertainment", "Summit","The Weinstein Company","Universal",
+					"Vertigo Entertainment", "Village Roadshow Pictures","Virgin","Warner Bros.",
+					
+					"Action","Adventure","Animation","Biography","Biopic",
+					"Comedy","Crime","Documentary","Drama",
+					"Fantasy","Genre","Horror","Musical",
+					"Mystery","Romance","Sci-Fi","Thriller",
+					"Western"];
+				
+  var color_range = ["#1f77b4","#aec7e8","#ff7f0e","#ffbb78",
+					"#2ca02c","#98df8a","#d62728","#ff9896",
+					"#9467bd","#c5b0d5","#8c564b","#c49c94",
+					"#e377c2","#f7b6d2","#7f7f7f","#c7c7c7",
+					"#bcbd22","#dbdb8d","#17becf","#9edae5",
+					"#9edae5","#393b79","#5254a3","#6b6ecf",
+					"#9c9ede","#637939","#8ca252","#b5cf6b",
+					"#cedb9c","#8c6d31","#bd9e39","#e7ba52",
+					"#e7cb94","#843c39","#ad494a","#d6616b",
+					
+					"#EBEB99","#E6E6E6","#CCCCCC","#B2B2B2","#B2B2B2",
+					"#999999","#808080","#666666","#4D4D4D",
+					"#333333","#191919","#FFFFB2","#FFFF66",
+					"#FFFF19","#B2B200","#808000","#4C4C00",
+					"#1A1A00"];
+
+
+
+	function colorObj(){
+	var color;
+	for(var i = 0; i < color_range.length; i++){
+		color = {};
+		for(var j = 0; j < color_domain.length; j++){
+			color[color_domain[j]] = color_range[j];
+		}
+		return color
+	}}
+	var colors = colorObj();
+	console.log(colorObj());
+	
+  //sets random color out of the four ranges 
+  var random_color = d3.scale.ordinal().range( ["#331433", "#662966", "#993D99", "#CC52CC"] );
+	
+  //sets the color of a range to a specific domain value
+  var color = d3.scale.ordinal().domain(color_domain).range(color_range);
+
+  // Sets svg in chart
+  var vis = d3.select("#chart").append("svg:svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("svg:g")
+    .attr("id", "cjart")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+
+  var partition = d3.layout.partition()
+    .sort(null)
+    .size([2 * Math.PI, radius * radius])
+    .value(function(d) { return d.Gross; });
+
+  // creates arc for values in the data
+  var arc = d3.svg.arc()
+    .startAngle(function(d) { return d.x; })
+    .endAngle(function(d) { return d.x + d.dx; })
+    .innerRadius(function(d) { return Math.sqrt(d.y); })
+    .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
+  
+  var totalSize = 0; 
+      
+  // retrieve csv data were filename is the input of the function
+  d3.csv(filename, function(error, data) {
+
+    _.each(data, function(element, index, list){
+      element.Gross = +element.Gross;
+    });
+
+    //Function of getting all the data 
+    function genJSON(csvData, groups) {
+
+      var genGroups = function(data) {
+      return _.map(data, function(element, index) {
+        return { name : index, children : element };
+      });
+      };
+
+      var nest = function(node, curIndex) {
+      // console.log(node.children);
+      if (curIndex === 0) {
+        node.children = genGroups(_.groupBy(csvData, groups[0]));
+        _.each(node.children, function (child) {
+        nest(child, curIndex + 1);
+        });
+      }
+      else {
+        if (curIndex < groups.length) {
+        node.children = genGroups(
+          _.groupBy(node.children, groups[curIndex])
+        );
+        _.each(node.children, function (child) {
+          nest(child, curIndex + 1);
+        });
+        }
+      }
+      return node;
+
+      };
+      return nest({}, 0);
+    }
+
+  //calls function from above
+  var preppedData = genJSON(data, ['Studio', 'Genre', 'Film'])
+  // console.log(JSON.stringify(preppedData));
+   
+  initializeBreadcrumbTrail();
+  drawLegend();
+
+  var div = d3.select("body").append("div") 
+    .attr("class", "tooltip")       
+    .style("opacity", 0);
+
+    var path = vis.datum(preppedData).selectAll("path")
+      .data(partition.nodes)
+      .enter().append("path")
+      .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
+      .attr("d", arc)
+      .attr("class", function(d) { return (d.children ? d : d.parent).name; })
+      .style("stroke", "#fff")
+      .style("fill", function(d) { 
+        var the_name = ((d.children ? d : d.parent).name);
+			  if(color_domain.indexOf(the_name) > -1) {
+				  return color(the_name);
+  			}
+  			else {
+  				return random_color(the_name);
+  			}
+  		})
+        .style("fill-rule", "evenodd")
+        .on("mouseover", mouseover);
+
+    d3.select("#container").on("mouseleave", mouseleave);
+    totalSize = path.node().__data__.value;
+
+
+    function mouseover(d) {
+
+      var percentage = (100 * d.value / totalSize).toPrecision(3);
+      var percentageString = percentage + "%";
+      if (percentage < 0.1) {
+      percentageString = "< 0.1%";
+      }
+
+      d3.select("#percentage")
+        .text(percentageString);
+
+      d3.select("#explanation")
+        .style("visibility", "");
+
+      d3.select("#name")
+        .text(d.name);
+
+      // Fade all the segments.
+      d3.selectAll("path")
+        .style("opacity", 0.3);
+
+      d3.select(this).style("opacity", "1")
+
+    // Then highlight only those that are an ancestor of the current segment.
+    // svg.selectAll("path")
+    //     .filter(function(node) {
+    //               return ;
+    //             })
+    //     .style("opacity", 1);
+
+      var sequenceArray = getAncestors(d);
+      updateBreadcrumbs(sequenceArray, percentageString);
+
+      // Fade all the segments.
+      d3.selectAll("path")
+          .style("opacity", 0.3);
+
+      // Then highlight only those that are an ancestor of the current segment.
+      vis.selectAll("path")
+          .filter(function(node) {
+                    return (sequenceArray.indexOf(node) >= 0);
+                  })
+          .style("opacity", 1);
+  }
+
+  d3.select("#chart").on("mouseleave", mouseleave);
+  function mouseleave(d) {
+
+           // Hide the breadcrumb trail
+    d3.select("#trail")
+        .style("visibility", "hidden");
+
+    // Deactivate all segments during transition.
+    d3.selectAll("path").on("mouseover", null);
+
+      // Deactivate all segments during transition.
+      // d3.selectAll("path").on("mouseover", null);
+
+      // Transition each segment to full opacity and then reactivate it.
+    d3.selectAll("path")
+        .transition()
+        .duration(500)
+        .style("opacity", 1);
+
+    d3.select("#explanation")
+        .style("visibility", "hidden");
+  }
+
+      //   .on("mouseover", function(d) {
+      // d3.select(this).style("opacity", ".8")
+    
+      //     div.transition()    
+      //         .duration(200)    
+      //         .style("fill", "blue")
+      //         .style("opacity", 1)  
+     
+      
+      // .on("mouseout", function(d) {
+      // d3.select(this).style("opacity", 1);
+      //     div.transition()    
+      //         .duration(500)    
+      //         .style("opacity", 1); 
+      // });
+
+// Given a node in a partition layout, return an array of all of its ancestor
+// nodes, highest first, but excluding the root.
+  function getAncestors(node) {
+    var path = [];
+    var current = node;
+    while (current.parent) {
+      path.unshift(current);
+      current = current.parent;
+    }
+    return path;
+  }
+
+function initializeBreadcrumbTrail() {
+  // Add the svg area.
+  var trail = d3.select("#sequence").append("svg:svg")
+      .attr("width", width)
+      .attr("height", 50)
+      .attr("id", "trail");
+  // Add the label at the end, for the percentage.
+  trail.append("svg:text")
+    .attr("id", "endlabel")
+    .style("fill", "#000");
+}
+
+// Generate a string that describes the points of a breadcrumb polygon.
+function breadcrumbPoints(d, i) {
+  var points = [];
+  points.push("0,0");
+  points.push(b.w + ",0");
+  points.push(b.w + b.t + "," + (b.h / 2));
+  points.push(b.w + "," + b.h);
+  points.push("0," + b.h);
+  if (i > 0) { // Leftmost breadcrumb; don't include 6th vertex.
+    points.push(b.t + "," + (b.h / 2));
+  }
+  return points.join(" ");
+}
+
+// Update the breadcrumb trail to show the current sequence and percentage.
+function updateBreadcrumbs(nodeArray, percentageString) {
+
+  // Data join; key function combines name and depth (= position in sequence).
+  var g = d3.select("#trail")
+      .selectAll("g")
+      .data(nodeArray, function(d) { return d.name + d.depth; });
+
+  // Add breadcrumb and label for entering nodes.
+  var entering = g.enter().append("svg:g");
+
+  entering.append("svg:polygon")
+      .attr("points", breadcrumbPoints)
+      .style("fill", function(d) { 
+        var the_name = ((d.children ? d : d.parent).name);
+        if(color_domain.indexOf(the_name) > -1) {
+          return color(the_name);
+        }
+        else {
+          return random_color(the_name);
+        }
+      })
+
+  entering.append("svg:text")
+      .attr("x", (b.w + b.t) / 2)
+      .attr("y", b.h / 2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .text(function(d) { return d.name; });
+
+  // Set position for entering and updating nodes.
+  g.attr("transform", function(d, i) {
+    return "translate(" + i * (b.w + b.s) + ", 0)";
+  });
+
+  // Remove exiting nodes.
+  g.exit().remove();
+
+  // Now move and update the percentage at the end.
+  d3.select("#trail").select("#endlabel")
+      .attr("x", (nodeArray.length + 0.5) * (b.w + b.s))
+      .attr("y", b.h / 2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .text(percentageString);
+
+  // Make the breadcrumb trail visible, if it's hidden.
+  d3.select("#trail")
+      .style("visibility", "");
+
+}
+
+function drawLegend() {
+
+  // Dimensions of legend item: width, height, spacing, radius of rounded rect.
+  var li = {
+    w: 200, h: 30, s: 3, r: 3
+  };
+
+  var legend = d3.select("#legend").append("svg:svg")
+      .attr("width", li.w)
+      .attr("height", 36 * (li.h + li.s));
+
+  var g = legend.selectAll("g")
+      .data(d3.entries(colors))
+            .enter().append("svg:g")
+           .attr("transform", function(d, i) {
+              return "translate(0," + i * (li.h + li.s) + ")";
+           });
+
+  g.append("svg:rect")
+      .attr("rx", li.r)
+      .attr("ry", li.r)
+      .attr("width", li.w)
+      .attr("height", li.h)
+      .style("fill", function(d) { return d.value; });
+
+  g.append("svg:text")
+      .attr("x", li.w / 2)
+      .attr("y", li.h / 2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .text(function(d) { return d.key; });
+}
+
+function toggleLegend() {
+  var legend = d3.select("#legend");
+  if (legend.style("visibility") == "hidden") {
+    legend.style("visibility", "");
+  } else {
+    legend.style("visibility", "hidden");
+  }
+}
+
+
+      });
+      
+      
+    }
+    
+    function change_data (year) {
+	  d3.select("#chart").select("svg").remove();
+	  d3.select("#legend").select("svg").remove();
+	  load_data(year + ".csv");
+      $("a").removeClass("selected");
+      $("#"+year).addClass("selected");
+      console.log(year);
+    }
+    change_data(2011);
+    
+</script>
+
+
+    <div id="years">
+    <ul>
+      <li><a id="2011" class="" onclick = change_data(2011)>2011</a></li>
+      <li><a id="2010" class="" onclick = change_data(2010)>2010</a></li> 
+      <li><a id="2009" class="" onclick = change_data(2009)>2009</a></li>
+      <li><a id="2008" class="" onclick = change_data(2008)>2008</a></li> 
+      <li><a id="2007" class="" onclick = change_data(2007)>2007</a></li> 
+    </ul>           
+</div> 
+ 
+</body>
+</html>
