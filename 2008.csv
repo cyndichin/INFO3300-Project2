@@ -1,149 +1,1 @@
-Studio,Genre,Film,Gross
-Buena Vista,Adventure,College Road Trip,51.55
-Disney,Animation,WALL-E,521.31
-Disney,Action,The Chronicles of Narnia: Prince Caspian,419.67
-Disney,Comedy,Bedtime Stories,212.87
-Disney,Animation,Bolt,309.98
-Disney,Adventure,Beverly Hills Chihuahua,149.28
-Disney,Comedy,High School Musical 3: Senior Year,252.91
-Disney,Drama,Step Up 2: The Streets,150.82
-Disney,Comedy,Swing Vote,17.63
-Disney,Action,Miracle at St. Anna,9.32
-Focus,Crime,In Bruges,33.39
-Fox,Animation,Dr. Seuss' Horton Hears a Who!,297.14
-Fox,Comedy,Marley and Me,242.72
-Fox,Comedy,What Happens in Vegas,219.38
-Fox,Action,Jumper,222.23
-Fox,Comedy,27 Dresses,160.26
-Fox,Thriller,The Day the Earth Stood Still,233.09
-Fox,Thriller,The Happening,163.4
-Fox,Adventure,Australia,211.34
-Fox,Action,Max Payne,85.42
-Fox,Drama,The Secret Life of Bees,39.95
-Fox,Action,Street Kings,65.57
-Fox,Horror,Shutter,47.88
-Fox,Action,Babylon A.D.,72.11
-Fox,Thriller,The X-Files: I Want to Believe,68.37
-Fox,Adventure,Meet Dave,50.65
-Independent,Crime,Slumdog Millionaire,377.91
-Independent,Comedy,Forgetting Sarah Marshall,105.17
-Independent,Comedy,Baby Mama,64.16
-Independent,Crime,Saw V,113.86
-Independent,Adventure,Nim's Island,100.08
-Independent,Horror,Prom Night,57.2
-Independent,Drama,Tyler Perry's Meet the Browns,41.98
-Independent,Comedy,Meet the Spartans,84.65
-Independent,Drama,Tyler Perry's The Family That Preys,37.11
-Independent,Drama,Changeling,113.02
-Independent,Animation,Star Wars: The Clone Wars,68.28
-Independent,Drama,Fireproof,33.47
-Independent,Action,Transporter 3,108.98
-Independent,Horror,Mirrors,77.49
-Independent,Thriller,The Bank Job,64.82
-Independent,Thriller,Untraceable,52.66
-Independent,Drama,The Other Boleyn Girl,77.71
-Independent,Comedy,Mad Money,26.41
-Independent,Animation,Igor,30.75
-Independent,Drama,Doubt,50.91
-Independent,Horror,The Haunting of Molly Hartley,15.42
-Independent,Drama,Rachel Getting Married,16.62
-Independent,Comedy,Miss Pettigrew Lives for a Day,16.72
-Independent,Comedy,The Longshots,11.77
-Independent,Biopic,The Express,9.81
-Independent,Comedy,Smart People,11.84
-Independent,Drama,The Visitor,18.08
-Independent,Drama,The Boy in the Striped Pyjamas,40.42
-Independent,Adventure,City of Ember,17.93
-Independent,Documentary,Expelled: No Intelligence Allowed,7.72
-Independent,Animation,Space Chimps,64.83
-Liberty Starz,Thriller,Traitor,27.66
-Lionsgate,Action,Rambo,113.24
-Lionsgate,Horror,The Eye,56.96
-Lionsgate,Drama,W.,29.51
-Lionsgate,Comedy,My Best Friend's Girl,41.62
-Lionsgate,Action,The Spirit,39.03
-Lionsgate,Action,Bangkok Dangerous,42.49
-Lionsgate,Comedy,Disaster Movie,34.82
-Lionsgate,Documentary,Religulous,13.64
-Lionsgate,Action,Punisher: War Zone,10.1
-MGM,Action,Quantum of Solace,586.09
-MGM,Thriller,Valkyrie,200.28
-New Line,Comedy,"Be Kind, Rewind",30.58
-New Line,Comedy,Over Her Dead Body,21.46
-Overture,Crime,Righteous Kill,78.46
-Paramount,Action,Iron Man,585.52
-Paramount,Action,Indiana Jones and the Kingdom of the Crystal Skull,786.64
-Paramount,Animation,Kung Fu Panda,631.74
-Paramount,Animation,Madagascar: Escape 2 Africa,603.9
-Paramount,Comedy,Tropic Thunder,188.07
-Paramount,Action,Eagle Eye,178.07
-Paramount,Action,Cloverfield,170.76
-Paramount,Fantasy,The Spiderwick Chronicles,162.84
-Paramount,Comedy,Drillbit Taylor,49.69
-Paramount,Comedy,The Love Guru,40.86
-Paramount,Horror,The Ruins,22.73
-Paramount,Drama,The Duchess,43.31
-Paramount,Comedy,Ghost Town,27.07
-Paramount,Drama,Stop-Loss,11.21
-Relativity Media,Comedy,Burn After Reading,163.72
-Relativity Media,Horror,The Strangers,82.39
-Relativity Media,Action,The Forbidden Kingdom,127.98
-Relativity Media,Action,Doomsday,22.21
-Sony,Action,Hancock,624.39
-Sony,Comedy,Step Brothers,128.11
-Sony,Comedy,You Don't Mess with the Zohan,199.94
-Sony,Action,Pineapple Express,101.62
-Sony,Crime,21,157.93
-Sony,Thriller,Vantage Point,151.16
-Sony,Drama,Seven Pounds,168.17
-Sony,Comedy,The House Bunny,70.44
-Sony,Comedy,Made of Honor,105.96
-Sony,Crime,Lakeview Terrace,44.65
-Sony,Comedy,First Sunday,38.8
-Sony,Horror,Quarantine,41.32
-Sony,Comedy,Nick and Norah's Infinite Playlist,33.51
-Sony,Drama,88 Minutes,32.59
-Sony,Biography,Cadillac Records,8.88
-Summit,Romance,Twilight,392.62
-Summit,Action,Never Back Down,41.63
-Summit,Comedy,Penelope,21.16
-Summit,Adventure,Sex Drive,18.76
-The Weinstein Company,Romance,Zack and Miri Make a Porno,42.1
-The Weinstein Company,Comedy,Superhero Movie,71.24
-The Weinstein Company,Romance,Vicky Cristina Barcelona,96.41
-The Weinstein Company,Comedy,Soul Men,12.33
-The Weinstein Company,Drama,Under the Same Moon,23.31
-Universal,Comedy,Mamma Mia!,609.84
-Universal,Action,The Incredible Hulk,263.43
-Universal,Action,Wanted,341.43
-Universal,Action,The Mummy: Tomb of the Dragon Emperor,401.13
-Universal,Action,Hellboy II: The Golden Army,160.39
-Universal,Comedy,Role Models,92.38
-Universal,Animation,The Tale of Despereaux,86.95
-Universal,Comedy,"Welcome Home, Roscoe Jenkins",43.65
-Universal,Action,Death Race,75.68
-Universal,Comedy,"Definitely, Maybe",55.45
-Universal,Biography,Milk,54.59
-Universal,Comedy,Leatherheads,41.3
-Universal,Animation,The Pirates Who Don't Do Anything,13.15
-Warner Bros.,Thriller,The Dark Knight,"1,004.56"
-Warner Bros.,Comedy,Sex and the City,415.25
-Warner Bros.,Drama,Gran Torino,269.96
-Warner Bros.,Action,Get Smart,230.69
-Warner Bros.,Comedy,Four Christmases,163.73
-Warner Bros.,Action,Journey to the Center of the Earth,241.99
-Warner Bros.,Comedy,Yes Man,223.24
-Warner Bros.,Adventure,"10,000 B.C.",269.78
-Warner Bros.,Fantasy,The Curious Case of Benjamin Button,333.93
-Warner Bros.,Adventure,Fool's Gold,111.23
-Warner Bros.,Drama,The Sisterhood of the Traveling Pants 2,44.35
-Warner Bros.,Action,Speed Racer,93.95
-Warner Bros.,Drama,Nights in Rodanthe,84.37
-Warner Bros.,Action,Body of Lies,115.1
-Warner Bros.,Adventure,Harold and Kumar Escape from Guantanamo Bay,43.49
-Warner Bros.,Comedy,Semi-Pro,43.88
-Warner Bros.,Drama,The Women,50.01
-Warner Bros.,Horror,One Missed Call,45.85
-Warner Bros.,Action,Appaloosa,27.67
-Warner Bros.,Drama,Kit Kittredge: An American Girl,17.66
-Warner Bros.,Crime,Pride & Glory,31.15
+Studio,Genre,Film,GrossDisney,Animation,WALL-E,521.31Disney,Action,The Chronicles of Narnia: Prince Caspian,419.67Disney,Comedy,Bedtime Stories,212.87Disney,Animation,Bolt,309.98Disney,Adventure,Beverly Hills Chihuahua,149.28Disney,Comedy,High School Musical 3: Senior Year,252.91Disney,Drama,Step Up 2: The Streets,150.82Disney,Comedy,Swing Vote,17.63Disney,Action,Miracle at St. Anna,9.32Fox,Animation,Dr. Seuss' Horton Hears a Who!,297.14Fox,Comedy,Marley and Me,242.72Fox,Comedy,What Happens in Vegas,219.38Fox,Action,Jumper,222.23Fox,Comedy,27 Dresses,160.26Fox,Thriller,The Day the Earth Stood Still,233.09Fox,Thriller,The Happening,163.4Fox,Adventure,Australia,211.34Fox,Action,Max Payne,85.42Fox,Drama,The Secret Life of Bees,39.95Fox,Action,Street Kings,65.57Fox,Horror,Shutter,47.88Fox,Action,Babylon A.D.,72.11Fox,Thriller,The X-Files: I Want to Believe,68.37Fox,Adventure,Meet Dave,50.65Independent,Crime,Slumdog Millionaire,377.91Independent,Comedy,Forgetting Sarah Marshall,105.17Independent,Comedy,Baby Mama,64.16Independent,Crime,Saw V,113.86Independent,Adventure,Nim's Island,100.08Independent,Horror,Prom Night,57.2Independent,Drama,Tyler Perry's Meet the Browns,41.98Independent,Comedy,Meet the Spartans,84.65Independent,Drama,Tyler Perry's The Family That Preys,37.11Independent,Drama,Changeling,113.02Independent,Animation,Star Wars: The Clone Wars,68.28Independent,Drama,Fireproof,33.47Independent,Action,Transporter 3,108.98Independent,Horror,Mirrors,77.49Independent,Thriller,The Bank Job,64.82Independent,Thriller,Untraceable,52.66Independent,Drama,The Other Boleyn Girl,77.71Independent,Comedy,Mad Money,26.41Independent,Animation,Igor,30.75Independent,Drama,Doubt,50.91Independent,Horror,The Haunting of Molly Hartley,15.42Independent,Drama,Rachel Getting Married,16.62Independent,Comedy,Miss Pettigrew Lives for a Day,16.72Independent,Comedy,The Longshots,11.77Independent,Biopic,The Express,9.81Independent,Comedy,Smart People,11.84Independent,Drama,The Visitor,18.08Independent,Drama,The Boy in the Striped Pyjamas,40.42Independent,Adventure,City of Ember,17.93Independent,Documentary,Expelled: No Intelligence Allowed,7.72Independent,Animation,Space Chimps,64.83MGM,Action,Quantum of Solace,586.09MGM,Thriller,Valkyrie,200.28Other Studios,Adventure,College Road Trip,51.55Other Studios,Crime,In Bruges,33.39Other Studios,Thriller,Traitor,27.66Other Studios,Action,Rambo,113.24Other Studios,Horror,The Eye,56.96Other Studios,Drama,W.,29.51Other Studios,Comedy,My Best Friend's Girl,41.62Other Studios,Action,The Spirit,39.03Other Studios,Action,Bangkok Dangerous,42.49Other Studios,Comedy,Disaster Movie,34.82Other Studios,Documentary,Religulous,13.64Other Studios,Action,Punisher: War Zone,10.1Other Studios,Comedy,"Be Kind, Rewind",30.58Other Studios,Comedy,Over Her Dead Body,21.46Other Studios,Crime,Righteous Kill,78.46Other Studios,Romance,Zack and Miri Make a Porno,42.1Other Studios,Comedy,Superhero Movie,71.24Other Studios,Romance,Vicky Cristina Barcelona,96.41Other Studios,Comedy,Soul Men,12.33Other Studios,Drama,Under the Same Moon,23.31Paramount,Action,Iron Man,585.52Paramount,Action,Indiana Jones and the Kingdom of the Crystal Skull,786.64Paramount,Animation,Kung Fu Panda,631.74Paramount,Animation,Madagascar: Escape 2 Africa,603.9Paramount,Comedy,Tropic Thunder,188.07Paramount,Action,Eagle Eye,178.07Paramount,Action,Cloverfield,170.76Paramount,Fantasy,The Spiderwick Chronicles,162.84Paramount,Comedy,Drillbit Taylor,49.69Paramount,Comedy,The Love Guru,40.86Paramount,Horror,The Ruins,22.73Paramount,Drama,The Duchess,43.31Paramount,Comedy,Ghost Town,27.07Paramount,Drama,Stop-Loss,11.21Relativity Media,Comedy,Burn After Reading,163.72Relativity Media,Horror,The Strangers,82.39Relativity Media,Action,The Forbidden Kingdom,127.98Relativity Media,Action,Doomsday,22.21Sony,Action,Hancock,624.39Sony,Comedy,Step Brothers,128.11Sony,Comedy,You Don't Mess with the Zohan,199.94Sony,Action,Pineapple Express,101.62Sony,Crime,21,157.93Sony,Thriller,Vantage Point,151.16Sony,Drama,Seven Pounds,168.17Sony,Comedy,The House Bunny,70.44Sony,Comedy,Made of Honor,105.96Sony,Crime,Lakeview Terrace,44.65Sony,Comedy,First Sunday,38.8Sony,Horror,Quarantine,41.32Sony,Comedy,Nick and Norah's Infinite Playlist,33.51Sony,Drama,88 Minutes,32.59Sony,Biography,Cadillac Records,8.88Summit,Romance,Twilight,392.62Summit,Action,Never Back Down,41.63Summit,Comedy,Penelope,21.16Summit,Adventure,Sex Drive,18.76Universal,Comedy,Mamma Mia!,609.84Universal,Action,The Incredible Hulk,263.43Universal,Action,Wanted,341.43Universal,Action,The Mummy: Tomb of the Dragon Emperor,401.13Universal,Action,Hellboy II: The Golden Army,160.39Universal,Comedy,Role Models,92.38Universal,Animation,The Tale of Despereaux,86.95Universal,Comedy,"Welcome Home, Roscoe Jenkins",43.65Universal,Action,Death Race,75.68Universal,Comedy,"Definitely, Maybe",55.45Universal,Biography,Milk,54.59Universal,Comedy,Leatherheads,41.3Universal,Animation,The Pirates Who Don't Do Anything,13.15Warner Bros.,Thriller,The Dark Knight,"1,004.56"Warner Bros.,Comedy,Sex and the City,415.25Warner Bros.,Drama,Gran Torino,269.96Warner Bros.,Action,Get Smart,230.69Warner Bros.,Comedy,Four Christmases,163.73Warner Bros.,Action,Journey to the Center of the Earth,241.99Warner Bros.,Comedy,Yes Man,223.24Warner Bros.,Adventure,"10,000 B.C.",269.78Warner Bros.,Fantasy,The Curious Case of Benjamin Button,333.93Warner Bros.,Adventure,Fool's Gold,111.23Warner Bros.,Drama,The Sisterhood of the Traveling Pants 2,44.35Warner Bros.,Action,Speed Racer,93.95Warner Bros.,Drama,Nights in Rodanthe,84.37Warner Bros.,Action,Body of Lies,115.1Warner Bros.,Adventure,Harold and Kumar Escape from Guantanamo Bay,43.49Warner Bros.,Comedy,Semi-Pro,43.88Warner Bros.,Drama,The Women,50.01Warner Bros.,Horror,One Missed Call,45.85Warner Bros.,Action,Appaloosa,27.67Warner Bros.,Drama,Kit Kittredge: An American Girl,17.66Warner Bros.,Crime,Pride & Glory,31.15

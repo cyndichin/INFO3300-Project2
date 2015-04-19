@@ -1,20 +1,6 @@
 {
     "children": [
         {
-            "name": "Buena Vista",
-            "children": [
-                {
-                    "name": "Adventure",
-                    "children": [
-                        {
-                            "name": "College Road Trip",
-                            "Gross": 51.55
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Disney",
             "children": [
                 {
@@ -75,20 +61,6 @@
                         {
                             "name": "Step Up 2: The Streets",
                             "Gross": 150.82
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Focus",
-            "children": [
-                {
-                    "name": "Crime",
-                    "children": [
-                        {
-                            "name": "In Bruges",
-                            "Gross": 33.39
                         }
                     ]
                 }
@@ -374,8 +346,53 @@
             ]
         },
         {
-            "name": "Liberty Starz",
+            "name": "MGM",
             "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Quantum of Solace",
+                            "Gross": 586.09
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "Valkyrie",
+                            "Gross": 200.28
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Other Studios",
+            "children": [
+                {
+                    "name": "Adventure",
+                    "children": [
+                        {
+                            "name": "College Road Trip",
+                            "Gross": 51.55
+                        }
+                    ]
+                },
+                {
+                    "name": "Crime",
+                    "children": [
+                        {
+                            "name": "In Bruges",
+                            "Gross": 33.39
+                        },
+                        {
+                            "name": "Righteous Kill",
+                            "Gross": 78.46
+                        }
+                    ]
+                },
                 {
                     "name": "Thriller",
                     "children": [
@@ -384,12 +401,7 @@
                             "Gross": 27.66
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Lionsgate",
-            "children": [
+                },
                 {
                     "name": "Action",
                     "children": [
@@ -426,6 +438,10 @@
                         {
                             "name": "W.",
                             "Gross": 29.51
+                        },
+                        {
+                            "name": "Under the Same Moon",
+                            "Gross": 23.31
                         }
                     ]
                 },
@@ -439,6 +455,22 @@
                         {
                             "name": "Disaster Movie",
                             "Gross": 34.82
+                        },
+                        {
+                            "name": "Be Kind, Rewind",
+                            "Gross": 30.58
+                        },
+                        {
+                            "name": "Over Her Dead Body",
+                            "Gross": 21.46
+                        },
+                        {
+                            "name": "Superhero Movie",
+                            "Gross": 71.24
+                        },
+                        {
+                            "name": "Soul Men",
+                            "Gross": 12.33
                         }
                     ]
                 },
@@ -450,59 +482,17 @@
                             "Gross": 13.64
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "MGM",
-            "children": [
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Quantum of Solace",
-                            "Gross": 586.09
-                        }
-                    ]
                 },
                 {
-                    "name": "Thriller",
+                    "name": "Romance",
                     "children": [
                         {
-                            "name": "Valkyrie",
-                            "Gross": 200.28
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "New Line",
-            "children": [
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Be Kind, Rewind",
-                            "Gross": 30.58
+                            "name": "Zack and Miri Make a Porno",
+                            "Gross": 42.1
                         },
                         {
-                            "name": "Over Her Dead Body",
-                            "Gross": 21.46
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Overture",
-            "children": [
-                {
-                    "name": "Crime",
-                    "children": [
-                        {
-                            "name": "Righteous Kill",
-                            "Gross": 78.46
+                            "name": "Vicky Cristina Barcelona",
+                            "Gross": 96.41
                         }
                     ]
                 }
@@ -771,46 +761,6 @@
                         {
                             "name": "Sex Drive",
                             "Gross": 18.76
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "The Weinstein Company",
-            "children": [
-                {
-                    "name": "Romance",
-                    "children": [
-                        {
-                            "name": "Zack and Miri Make a Porno",
-                            "Gross": 42.1
-                        },
-                        {
-                            "name": "Vicky Cristina Barcelona",
-                            "Gross": 96.41
-                        }
-                    ]
-                },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Superhero Movie",
-                            "Gross": 71.24
-                        },
-                        {
-                            "name": "Soul Men",
-                            "Gross": 12.33
-                        }
-                    ]
-                },
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "Under the Same Moon",
-                            "Gross": 23.31
                         }
                     ]
                 }

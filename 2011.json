@@ -1,34 +1,6 @@
 {
     "children": [
         {
-            "name": "Aardman Animations",
-            "children": [
-                {
-                    "name": "Animation",
-                    "children": [
-                        {
-                            "name": "Arthur Christmas",
-                            "Gross": 147.41
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "CBS",
-            "children": [
-                {
-                    "name": "Romance",
-                    "children": [
-                        {
-                            "name": "Beastly",
-                            "Gross": 43.17
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Columbia",
             "children": [
                 {
@@ -165,20 +137,6 @@
                         {
                             "name": "The Help",
                             "Gross": 216.64
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Focus",
-            "children": [
-                {
-                    "name": "Thriller",
-                    "children": [
-                        {
-                            "name": "Tinker Tailor Soldier Spy",
-                            "Gross": 80.63
                         }
                     ]
                 }
@@ -461,14 +419,65 @@
             ]
         },
         {
-            "name": "Lionsgate",
+            "name": "Other Studios",
             "children": [
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Arthur Christmas",
+                            "Gross": 147.41
+                        },
+                        {
+                            "name": "Happy Feet 2",
+                            "Gross": 150.41
+                        }
+                    ]
+                },
+                {
+                    "name": "Romance",
+                    "children": [
+                        {
+                            "name": "Beastly",
+                            "Gross": 43.17
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "Tinker Tailor Soldier Spy",
+                            "Gross": 80.63
+                        },
+                        {
+                            "name": "In Time",
+                            "Gross": 173.93
+                        },
+                        {
+                            "name": "Source Code",
+                            "Gross": 147.33
+                        },
+                        {
+                            "name": "Limitless",
+                            "Gross": 161.85
+                        }
+                    ]
+                },
                 {
                     "name": "Comedy",
                     "children": [
                         {
                             "name": "A Very Harold and Kumar Christmas",
                             "Gross": 35.39
+                        },
+                        {
+                            "name": "No Strings Attached",
+                            "Gross": 149.23
+                        },
+                        {
+                            "name": "The Dilemma",
+                            "Gross": 69.72
                         }
                     ]
                 },
@@ -486,6 +495,10 @@
                         {
                             "name": "Warrior",
                             "Gross": 23.06
+                        },
+                        {
+                            "name": "Abduction",
+                            "Gross": 82.09
                         }
                     ]
                 },
@@ -495,45 +508,32 @@
                         {
                             "name": "The Lincoln Lawyer",
                             "Gross": 75.01
+                        },
+                        {
+                            "name": "Everything Must Go",
+                            "Gross": 2.71
+                        },
+                        {
+                            "name": "Footloose",
+                            "Gross": 63.54
+                        },
+                        {
+                            "name": "The Beaver",
+                            "Gross": 6.37
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Miramax",
-            "children": [
+                },
                 {
                     "name": "Horror",
                     "children": [
                         {
                             "name": "Don't Be Afraid Of The Dark",
                             "Gross": 36.99
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Morgan Creek Productions",
-            "children": [
-                {
-                    "name": "Horror",
-                    "children": [
+                        },
                         {
                             "name": "Dream House",
                             "Gross": 38.5
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "New Line Cinema",
-            "children": [
-                {
-                    "name": "Horror",
-                    "children": [
+                        },
                         {
                             "name": "Final Destination 5",
                             "Gross": 157.89
@@ -605,20 +605,6 @@
                         {
                             "name": "Cars 2",
                             "Gross": 559.85
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Regency Enterprises",
-            "children": [
-                {
-                    "name": "Thriller",
-                    "children": [
-                        {
-                            "name": "In Time",
-                            "Gross": 173.93
                         }
                     ]
                 }
@@ -707,20 +693,6 @@
             ]
         },
         {
-            "name": "Reliance Entertainment",
-            "children": [
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "Everything Must Go",
-                            "Gross": 2.71
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Sony",
             "children": [
                 {
@@ -778,56 +750,6 @@
                         {
                             "name": "The Smurfs",
                             "Gross": 563.75
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Spyglass Entertainment",
-            "children": [
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "Footloose",
-                            "Gross": 63.54
-                        }
-                    ]
-                },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "No Strings Attached",
-                            "Gross": 149.23
-                        },
-                        {
-                            "name": "The Dilemma",
-                            "Gross": 69.72
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Summit",
-            "children": [
-                {
-                    "name": "Thriller",
-                    "children": [
-                        {
-                            "name": "Source Code",
-                            "Gross": 147.33
-                        }
-                    ]
-                },
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "The Beaver",
-                            "Gross": 6.37
                         }
                     ]
                 }
@@ -956,48 +878,6 @@
                         {
                             "name": "Your Highness",
                             "Gross": 24.86
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Vertigo Entertainment",
-            "children": [
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Abduction",
-                            "Gross": 82.09
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Village Roadshow Pictures",
-            "children": [
-                {
-                    "name": "Animation",
-                    "children": [
-                        {
-                            "name": "Happy Feet 2",
-                            "Gross": 150.41
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Virgin",
-            "children": [
-                {
-                    "name": "Thriller",
-                    "children": [
-                        {
-                            "name": "Limitless",
-                            "Gross": 161.85
                         }
                     ]
                 }

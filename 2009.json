@@ -1,33 +1,6 @@
 {
     "children": [
         {
-            "name": "Buena Vista",
-            "children": [
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Race to Witch Mountain",
-                            "Gross": 106.38
-                        },
-                        {
-                            "name": "Surrogates",
-                            "Gross": 122.43
-                        }
-                    ]
-                },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Old Dogs",
-                            "Gross": 96.75
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Disney",
             "children": [
                 {
@@ -70,37 +43,6 @@
                         {
                             "name": "G-Force",
                             "Gross": 285.1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Focus",
-            "children": [
-                {
-                    "name": "Animation",
-                    "children": [
-                        {
-                            "name": "9",
-                            "Gross": 48.41
-                        }
-                    ]
-                },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Away We Go",
-                            "Gross": 14.89
-                        },
-                        {
-                            "name": "Pirate Radio (The Boat that Rocked, UK)",
-                            "Gross": 36.34
-                        },
-                        {
-                            "name": "Taking Woodstock",
-                            "Gross": 9.98
                         }
                     ]
                 }
@@ -321,8 +263,71 @@
             ]
         },
         {
-            "name": "Lionsgate",
+            "name": "Other Studios",
             "children": [
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "Race to Witch Mountain",
+                            "Gross": 106.38
+                        },
+                        {
+                            "name": "Surrogates",
+                            "Gross": 122.43
+                        },
+                        {
+                            "name": "Gamer",
+                            "Gross": 40.82
+                        },
+                        {
+                            "name": "Crank: High Voltage",
+                            "Gross": 34.5
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "Old Dogs",
+                            "Gross": 96.75
+                        },
+                        {
+                            "name": "Away We Go",
+                            "Gross": 14.89
+                        },
+                        {
+                            "name": "Pirate Radio (The Boat that Rocked, UK)",
+                            "Gross": 36.34
+                        },
+                        {
+                            "name": "Taking Woodstock",
+                            "Gross": 9.98
+                        },
+                        {
+                            "name": "Fame",
+                            "Gross": 77.21
+                        },
+                        {
+                            "name": "Adventureland",
+                            "Gross": 17.16
+                        },
+                        {
+                            "name": "Extract",
+                            "Gross": 10.83
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "9",
+                            "Gross": 48.41
+                        }
+                    ]
+                },
                 {
                     "name": "Drama",
                     "children": [
@@ -333,6 +338,14 @@
                         {
                             "name": "Brothers",
                             "Gross": 43.27
+                        },
+                        {
+                            "name": "Everybody's Fine",
+                            "Gross": 16.4
+                        },
+                        {
+                            "name": "Nine",
+                            "Gross": 53.99
                         }
                     ]
                 },
@@ -346,56 +359,20 @@
                     ]
                 },
                 {
-                    "name": "Action",
+                    "name": "Horror",
                     "children": [
                         {
-                            "name": "Gamer",
-                            "Gross": 40.82
-                        },
-                        {
-                            "name": "Crank: High Voltage",
-                            "Gross": 34.5
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "MGM",
-            "children": [
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Fame",
-                            "Gross": 77.21
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Miramax",
-            "children": [
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Adventureland",
-                            "Gross": 17.16
-                        },
-                        {
-                            "name": "Extract",
-                            "Gross": 10.83
+                            "name": "The Unborn",
+                            "Gross": 76.51
                         }
                     ]
                 },
                 {
-                    "name": "Drama",
+                    "name": "Adventure",
                     "children": [
                         {
-                            "name": "Everybody's Fine",
-                            "Gross": 16.4
+                            "name": "The Road",
+                            "Gross": 27.63
                         }
                     ]
                 }
@@ -482,20 +459,6 @@
                         {
                             "name": "Friday the 13th",
                             "Gross": 91.4
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Relativity Media",
-            "children": [
-                {
-                    "name": "Horror",
-                    "children": [
-                        {
-                            "name": "The Unborn",
-                            "Gross": 76.51
                         }
                     ]
                 }
@@ -667,29 +630,6 @@
                         {
                             "name": "Bandslam",
                             "Gross": 12.1
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "The Weinstein Company",
-            "children": [
-                {
-                    "name": "Adventure",
-                    "children": [
-                        {
-                            "name": "The Road",
-                            "Gross": 27.63
-                        }
-                    ]
-                },
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "Nine",
-                            "Gross": 53.99
                         }
                     ]
                 }

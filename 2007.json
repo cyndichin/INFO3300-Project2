@@ -212,7 +212,7 @@
             ]
         },
         {
-            "name": "Lionsgate",
+            "name": "Other Studios",
             "children": [
                 {
                     "name": "Western",
@@ -229,6 +229,10 @@
                         {
                             "name": "Good Luck Chuck",
                             "Gross": 59.19
+                        },
+                        {
+                            "name": "The Nanny Diaries",
+                            "Gross": 47.74
                         }
                     ]
                 },
@@ -238,6 +242,14 @@
                         {
                             "name": "Hostel: Part II",
                             "Gross": 35.62
+                        },
+                        {
+                            "name": "Halloween",
+                            "Gross": 80.25
+                        },
+                        {
+                            "name": "The Mist",
+                            "Gross": 57.29
                         }
                     ]
                 },
@@ -249,32 +261,35 @@
                             "Gross": 38.09
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Mediaplex",
-            "children": [
+                },
                 {
                     "name": "Action",
                     "children": [
                         {
                             "name": "Dragon Wars (aka D-War)",
                             "Gross": 75.11
+                        },
+                        {
+                            "name": "Grindhouse",
+                            "Gross": 25.42
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "MGM",
-            "children": [
+                },
                 {
                     "name": "Thriller",
                     "children": [
                         {
                             "name": "Mr. Brooks",
                             "Gross": 48.12
+                        }
+                    ]
+                },
+                {
+                    "name": "Documentary",
+                    "children": [
+                        {
+                            "name": "Sicko",
+                            "Gross": 36.09
                         }
                     ]
                 }
@@ -435,51 +450,6 @@
                         {
                             "name": "We Own the Night",
                             "Gross": 54.93
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "The Weinstein Company",
-            "children": [
-                {
-                    "name": "Horror",
-                    "children": [
-                        {
-                            "name": "Halloween",
-                            "Gross": 80.25
-                        },
-                        {
-                            "name": "The Mist",
-                            "Gross": 57.29
-                        }
-                    ]
-                },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "The Nanny Diaries",
-                            "Gross": 47.74
-                        }
-                    ]
-                },
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Grindhouse",
-                            "Gross": 25.42
-                        }
-                    ]
-                },
-                {
-                    "name": "Documentary",
-                    "children": [
-                        {
-                            "name": "Sicko",
-                            "Gross": 36.09
                         }
                     ]
                 }

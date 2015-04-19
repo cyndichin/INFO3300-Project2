@@ -1,52 +1,6 @@
 {
     "children": [
         {
-            "name": "CBS",
-            "children": [
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "Extraordinary Measures",
-                            "Gross": 15.14
-                        }
-                    ]
-                },
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Faster",
-                            "Gross": 35.626
-                        }
-                    ]
-                },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "The Back-up Plan",
-                            "Gross": 77.477
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Crest",
-            "children": [
-                {
-                    "name": "Animation",
-                    "children": [
-                        {
-                            "name": "Alpha and Omega",
-                            "Gross": 50.507
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Disney",
             "children": [
                 {
@@ -176,20 +130,6 @@
                         {
                             "name": "The Chronicles of Narnia: The Voyage of the Dawn Treader",
                             "Gross": 415.685
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Highlight Communications",
-            "children": [
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Resident Evil: Afterlife",
-                            "Gross": 296.22
                         }
                     ]
                 }
@@ -412,25 +352,28 @@
             ]
         },
         {
-            "name": "Liberty Starz",
+            "name": "Other Studios",
             "children": [
                 {
-                    "name": "Horror",
+                    "name": "Drama",
                     "children": [
                         {
-                            "name": "The Crazies",
-                            "Gross": 54.803
+                            "name": "Extraordinary Measures",
+                            "Gross": 15.14
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Lionsgate",
-            "children": [
+                },
                 {
                     "name": "Action",
                     "children": [
+                        {
+                            "name": "Faster",
+                            "Gross": 35.626
+                        },
+                        {
+                            "name": "Resident Evil: Afterlife",
+                            "Gross": 296.22
+                        },
                         {
                             "name": "Daybreakers",
                             "Gross": 51.41
@@ -438,6 +381,53 @@
                         {
                             "name": "Killers",
                             "Gross": 98.16
+                        },
+                        {
+                            "name": "The Spy Next Door",
+                            "Gross": 45.239
+                        }
+                    ]
+                },
+                {
+                    "name": "Comedy",
+                    "children": [
+                        {
+                            "name": "The Back-up Plan",
+                            "Gross": 77.477
+                        },
+                        {
+                            "name": "Why Did I Get Married Too?",
+                            "Gross": 60.67
+                        },
+                        {
+                            "name": "Piranha 3-D",
+                            "Gross": 83.188
+                        },
+                        {
+                            "name": "Youth in Revolt",
+                            "Gross": 19.649
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "children": [
+                        {
+                            "name": "Alpha and Omega",
+                            "Gross": 50.507
+                        }
+                    ]
+                },
+                {
+                    "name": "Horror",
+                    "children": [
+                        {
+                            "name": "The Crazies",
+                            "Gross": 54.803
+                        },
+                        {
+                            "name": "My Soul to Take",
+                            "Gross": 20.971
                         }
                     ]
                 },
@@ -450,20 +440,6 @@
                         }
                     ]
                 },
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Why Did I Get Married Too?",
-                            "Gross": 60.67
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "MGM",
-            "children": [
                 {
                     "name": "Adventure",
                     "children": [
@@ -562,29 +538,6 @@
                         {
                             "name": "True Grit",
                             "Gross": 252.273
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Relativity Media",
-            "children": [
-                {
-                    "name": "Horror",
-                    "children": [
-                        {
-                            "name": "My Soul to Take",
-                            "Gross": 20.971
-                        }
-                    ]
-                },
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "The Spy Next Door",
-                            "Gross": 45.239
                         }
                     ]
                 }
@@ -716,24 +669,6 @@
                         {
                             "name": "The Ghost Writer",
                             "Gross": 60.22
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "The Weinstein Company",
-            "children": [
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Piranha 3-D",
-                            "Gross": 83.188
-                        },
-                        {
-                            "name": "Youth in Revolt",
-                            "Gross": 19.649
                         }
                     ]
                 }
