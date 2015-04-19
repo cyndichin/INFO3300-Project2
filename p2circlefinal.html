@@ -56,54 +56,54 @@ function load_data (filename) {
 
   //Colors
   var color_domain = ["Aardman Animations","Buena Vista","CBS","Columbia",
-					"Crest","Disney","DreamWorks","Focus",
-					"Fox", "Happy Madison","Highlight Communications",
-					"Independent", "Legendary Pictures","Liberty Starz","Lionsgate",
-					"Mediaplex", "MGM","Miramax","Morgan Creek Productions","New Line",
-					"New Line Cinema", "Overture","Paramount","Pixar",
-					"Regency Enterprises", "Relativity Media","Reliance Entertainment","Sony",
-					"Spyglass Entertainment", "Summit","The Weinstein Company","Universal",
-					"Vertigo Entertainment", "Village Roadshow Pictures","Virgin","Warner Bros.",
-					
-					"Action","Adventure","Animation","Biography","Biopic",
-					"Comedy","Crime","Documentary","Drama",
-					"Fantasy","Genre","Horror","Musical",
-					"Mystery","Romance","Sci-Fi","Thriller",
-					"Western"];
-				
+          "Crest","Disney","DreamWorks","Focus",
+          "Fox", "Happy Madison","Highlight Communications",
+          "Independent", "Legendary Pictures","Liberty Starz","Lionsgate",
+          "Mediaplex", "MGM","Miramax","Morgan Creek Productions","New Line",
+          "New Line Cinema", "Overture","Paramount","Pixar",
+          "Regency Enterprises", "Relativity Media","Reliance Entertainment","Sony",
+          "Spyglass Entertainment", "Summit","The Weinstein Company","Universal",
+          "Vertigo Entertainment", "Village Roadshow Pictures","Virgin","Warner Bros.",
+          
+          "Action","Adventure","Animation","Biography","Biopic",
+          "Comedy","Crime","Documentary","Drama",
+          "Fantasy","Genre","Horror","Musical",
+          "Mystery","Romance","Sci-Fi","Thriller",
+          "Western"];
+        
   var color_range = ["#1f77b4","#aec7e8","#ff7f0e","#ffbb78",
-					"#2ca02c","#98df8a","#d62728","#ff9896",
-					"#9467bd","#c5b0d5","#8c564b","#c49c94",
-					"#e377c2","#f7b6d2","#7f7f7f","#c7c7c7",
-					"#bcbd22","#dbdb8d","#17becf","#9edae5",
-					"#9edae5","#393b79","#5254a3","#6b6ecf",
-					"#9c9ede","#637939","#8ca252","#b5cf6b",
-					"#cedb9c","#8c6d31","#bd9e39","#e7ba52",
-					"#e7cb94","#843c39","#ad494a","#d6616b",
-					
-					"#EBEB99","#E6E6E6","#CCCCCC","#B2B2B2","#B2B2B2",
-					"#999999","#808080","#666666","#4D4D4D",
-					"#333333","#191919","#FFFFB2","#FFFF66",
-					"#FFFF19","#B2B200","#808000","#4C4C00",
-					"#1A1A00"];
+          "#2ca02c","#98df8a","#d62728","#ff9896",
+          "#9467bd","#c5b0d5","#8c564b","#c49c94",
+          "#e377c2","#f7b6d2","#7f7f7f","#c7c7c7",
+          "#bcbd22","#dbdb8d","#17becf","#9edae5",
+          "#9edae5","#393b79","#5254a3","#6b6ecf",
+          "#9c9ede","#637939","#8ca252","#b5cf6b",
+          "#cedb9c","#8c6d31","#bd9e39","#e7ba52",
+          "#e7cb94","#843c39","#ad494a","#d6616b",
+          
+          "#EBEB99","#E6E6E6","#CCCCCC","#B2B2B2","#B2B2B2",
+          "#999999","#808080","#666666","#4D4D4D",
+          "#333333","#191919","#FFFFB2","#FFFF66",
+          "#FFFF19","#B2B200","#808000","#4C4C00",
+          "#1A1A00"];
 
 
 
-	function colorObj(){
-	var color;
-	for(var i = 0; i < color_range.length; i++){
-		color = {};
-		for(var j = 0; j < color_domain.length; j++){
-			color[color_domain[j]] = color_range[j];
-		}
-		return color
-	}}
-	var colors = colorObj();
-	console.log(colorObj());
-	
+  function colorObj(){
+  var color;
+  for(var i = 0; i < color_range.length; i++){
+    color = {};
+    for(var j = 0; j < color_domain.length; j++){
+      color[color_domain[j]] = color_range[j];
+    }
+    return color
+  }}
+  var colors = colorObj();
+  console.log(colorObj());
+  
   //sets random color out of the four ranges 
   var random_color = d3.scale.ordinal().range( ["#331433", "#662966", "#993D99", "#CC52CC"] );
-	
+  
   //sets the color of a range to a specific domain value
   var color = d3.scale.ordinal().domain(color_domain).range(color_range);
 
@@ -129,51 +129,12 @@ function load_data (filename) {
     .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
   
   var totalSize = 0; 
-      
-  // retrieve csv data were filename is the input of the function
-  d3.csv(filename, function(error, data) {
+  
+  //Load JSON to preppedData    
+  var preppedData;
+  d3.json(filename, function(error, json){
+     preppedData = json;
 
-    _.each(data, function(element, index, list){
-      element.Gross = +element.Gross;
-    });
-
-    //Function of getting all the data 
-    function genJSON(csvData, groups) {
-
-      var genGroups = function(data) {
-      return _.map(data, function(element, index) {
-        return { name : index, children : element };
-      });
-      };
-
-      var nest = function(node, curIndex) {
-      // console.log(node.children);
-      if (curIndex === 0) {
-        node.children = genGroups(_.groupBy(csvData, groups[0]));
-        _.each(node.children, function (child) {
-        nest(child, curIndex + 1);
-        });
-      }
-      else {
-        if (curIndex < groups.length) {
-        node.children = genGroups(
-          _.groupBy(node.children, groups[curIndex])
-        );
-        _.each(node.children, function (child) {
-          nest(child, curIndex + 1);
-        });
-        }
-      }
-      return node;
-
-      };
-      return nest({}, 0);
-    }
-
-  //calls function from above
-  var preppedData = genJSON(data, ['Studio', 'Genre', 'Film'])
-  // console.log(JSON.stringify(preppedData));
-   
   initializeBreadcrumbTrail();
   drawLegend();
 
@@ -190,13 +151,13 @@ function load_data (filename) {
       .style("stroke", "#fff")
       .style("fill", function(d) { 
         var the_name = ((d.children ? d : d.parent).name);
-			  if(color_domain.indexOf(the_name) > -1) {
-				  return color(the_name);
-  			}
-  			else {
-  				return random_color(the_name);
-  			}
-  		})
+        if(color_domain.indexOf(the_name) > -1) {
+          return color(the_name);
+        }
+        else {
+          return random_color(the_name);
+        }
+      })
         .style("fill-rule", "evenodd")
         .on("mouseover", mouseover);
 
@@ -427,9 +388,10 @@ function toggleLegend() {
     }
     
     function change_data (year) {
-	  d3.select("#chart").select("svg").remove();
-	  d3.select("#legend").select("svg").remove();
-	  load_data(year + ".csv");
+    d3.select("#chart").select("svg").remove();
+    d3.select("#legend").select("svg").remove();
+    d3.select("#sequence").select("svg".remove();
+    load_data(year + ".json");
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
       console.log(year);
