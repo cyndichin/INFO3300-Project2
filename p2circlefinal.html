@@ -22,9 +22,17 @@
       <h1><div id = "title"></div></h1>
     </div>
 
-    <div id="sidebar">
-      <div id="legend"></div>
+        
+    <div id="sidebar1">
+      <h2>Studio Names</h2>
+      <div id="studiolegend"></div>
     </div>
+      
+    <div id="sidebar">
+       <h2>Movie Genres</h2>
+      <div id="genrelegend"></div>
+    </div>
+      
 
     <!-- Visualization Container -->
     <div id="main">
@@ -51,16 +59,17 @@ function load_data (filename) {
     w: 250, h: 40, s: 3, t: 10
   };
 
+  var li = {
+    w: 200, h: 30, s: 3, r: 3
+  };
+
   //Colors
-  var color_domain = ["Aardman Animations","Buena Vista","CBS","Columbia",
-          "Crest","Disney","DreamWorks","Focus",
-          "Fox", "Happy Madison","Highlight Communications",
-          "Independent", "Legendary Pictures","Liberty Starz","Lionsgate",
-          "Mediaplex", "MGM","Miramax","Morgan Creek Productions","New Line",
-          "New Line Cinema", "Overture","Paramount","Pixar",
-          "Regency Enterprises", "Relativity Media","Reliance Entertainment","Sony",
-          "Spyglass Entertainment", "Summit","The Weinstein Company","Universal",
-          "Vertigo Entertainment", "Village Roadshow Pictures","Virgin","Warner Bros.",
+   var color_domain = ["Columbia","Disney","DreamWorks",
+          "Fox", "Happy Madison","Independent",
+          "Legendary Pictures","MGM","Paramount",
+          "Pixar","Relativity Media","Sony",
+          "Spyglass Entertainment", "Summit","The Weinstein Company",
+          "Universal","Warner Bros.",
           
           "Action","Adventure","Animation","Biography","Biopic",
           "Comedy","Crime","Documentary","Drama",
@@ -68,33 +77,30 @@ function load_data (filename) {
           "Mystery","Romance","Sci-Fi","Thriller",
           "Western"];
         
-  var color_range = ["#1f77b4","#aec7e8","#ff7f0e","#ffbb78",
-          "#2ca02c","#98df8a","#d62728","#ff9896",
-          "#9467bd","#c5b0d5","#8c564b","#c49c94",
-          "#e377c2","#f7b6d2","#7f7f7f","#c7c7c7",
-          "#bcbd22","#dbdb8d","#17becf","#9edae5",
-          "#9edae5","#393b79","#5254a3","#6b6ecf",
-          "#9c9ede","#637939","#8ca252","#b5cf6b",
-          "#cedb9c","#8c6d31","#bd9e39","#e7ba52",
-          "#e7cb94","#843c39","#ad494a","#d6616b",
+  var color_range = ["#ffbb78","#98df8a","#d62728",
+          "#9467bd","#3b3ef6","#613b10",
+          "#e377c2","#7f7f7f","#25cfc3",
+          "#6b6ecf","#637939","#8ca252",
+          "#b5cf6b","#8c6d31","#bd9e39",
+          "#e7ba52","#fffb00",
           
-          "#EBEB99","#E6E6E6","#CCCCCC","#B2B2B2","#B2B2B2",
-          "#999999","#808080","#666666","#4D4D4D",
+          "#d6616b","#E6E6E6","#CCCCCC","#B2B2B2","#dbdb8d",
+          "#999999","#808080","#666666","#5d4663",
           "#333333","#191919","#FFFFB2","#FFFF66",
-          "#FFFF19","#B2B200","#808000","#4C4C00",
-          "#1A1A00"];
-
-  function colorObj(){
+          "#c5b0d5","#f2b5f7","#b1faf1","#f28888",
+          "#8f7857"];
+  function colorObj(num){
   var color;
-  for(var i = 0; i < color_range.length; i++){
+  for(var i = num; i < color_range.length; i++){
     color = {};
-    for(var j = 0; j < color_domain.length; j++){
+    for(var j = num; j < color_domain.length; j++){
       color[color_domain[j]] = color_range[j];
     }
     return color
   }}
-  var colors = colorObj();
-  console.log(colorObj());
+  var scolors = colorObj(0);
+  var gcolors = colorObj(17);
+  // console.log(colorObj());
   
   //sets random color out of the four ranges 
   var random_color = d3.scale.ordinal().range( ["#331433", "#662966", "#993D99", "#CC52CC"] );
@@ -109,7 +115,6 @@ function load_data (filename) {
     .append("svg:g")
     .attr("id", "container")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
 
   var partition = d3.layout.partition()
     .sort(null)
@@ -131,7 +136,9 @@ function load_data (filename) {
      preppedData = json;
 
   initializeBreadcrumbTrail();
-  drawLegend();
+  drawGenreLegend();
+  drawStudioLegend();
+  // d3.select("#togglelegend").on("click", toggleLegend);
 
   var div = d3.select("body").append("div") 
     .attr("class", "tooltip")       
@@ -146,7 +153,8 @@ function load_data (filename) {
       .style("stroke", "#fff")
       .style("fill", function(d) { 
         var the_name = ((d.children ? d : d.parent).name);
-        if(color_domain.indexOf(the_name) > -1) {
+        var found = $.inArray(the_name, d) > -1
+        if(the_name != null) {
           return color(the_name);
         }
         else {
@@ -172,6 +180,9 @@ function mouseover(d) {
 
   d3.select("#explanation")
       .style("visibility", "");
+
+    d3.select("#name")
+      .text(d.name);
 
   var sequenceArray = getAncestors(d);
   updateBreadcrumbs(sequenceArray, percentageString);
@@ -319,21 +330,45 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 
 }
 
-function drawLegend() {
-
+function drawStudioLegend() {
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
-  var li = {
-    w: 200, h: 30, s: 3, r: 3
-  };
 
-  var legend = d3.select("#legend").append("svg:svg")
+  var legend = d3.select("#studiolegend").append("svg:svg")
       .attr("width", li.w)
-      .attr("height", 36 * (li.h + li.s));
+      .attr("height", 17 * (li.h + li.s));
 
   var g = legend.selectAll("g")
-      .data(d3.entries(colors))
+      .data(d3.entries(scolors))
             .enter().append("svg:g")
            .attr("transform", function(d, i) {
+              return "translate(0," + i * (li.h + li.s) + ")";
+           });
+
+  g.append("svg:rect")
+      .attr("rx", li.r)
+      .attr("ry", li.r)
+      .attr("width", li.w)
+      .attr("height", li.h)
+      .style("fill", function(d) { return d.value; });
+
+  g.append("svg:text")
+      .attr("x", li.w / 2)
+      .attr("y", li.h / 2)
+      .attr("dy", "0.35em")
+      .attr("text-anchor", "middle")
+      .text(function(d) { return d.key; });
+}
+
+function drawGenreLegend() {
+  // Dimensions of legend item: width, height, spacing, radius of rounded rect.
+  var legend = d3.select("#genrelegend").append("svg:svg")
+      .attr("width", li.w)
+      .attr("height", 18 * (li.h + li.s));
+
+  var g = legend.selectAll("g")
+     .data(d3.entries(gcolors))
+     .enter().append("svg:g")
+     .attr("transform", function(d, i) {
               return "translate(0," + i * (li.h + li.s) + ")";
            });
 
@@ -358,8 +393,7 @@ function toggleLegend() {
     legend.style("visibility", "");
   } else {
     legend.style("visibility", "hidden");
-  }
-}
+  }}
 
 
       });
@@ -368,21 +402,21 @@ function toggleLegend() {
     }
     
     function change_data (year) {
-    d3.select("#chart").select("svg").remove();
-    d3.select("#legend").select("svg").remove();
-    d3.select("#sequence").select("svg").remove();
-    load_data(year + ".json");
+     d3.select("#chart").select("svg").remove();
+     d3.select("#studiolegend").select("svg").remove();
+     d3.select("#genrelegend").select("svg").remove();
+     d3.select("#sequence").select("svg").remove();
+     load_data(year + ".json");
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
       console.log(year);
       document.getElementById('title').innerHTML = "Movies of " + year;
 
+
     }
     change_data(2011);
     
 </script>
-
-
     <div id="years">
     <ul>
       <li><a id="2011" class="" onclick = change_data(2011)>2011</a></li>
