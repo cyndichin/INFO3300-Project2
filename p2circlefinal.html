@@ -69,7 +69,7 @@ function load_data (filename, is_changed) {
           "Legendary Pictures","MGM","Paramount",
           "Pixar","Relativity Media","Sony",
           "Spyglass Entertainment", "Summit","The Weinstein Company",
-          "Universal","Warner Bros.",
+          "Universal","Warner Bros.", "Other Studios",
           
           "Action","Adventure","Animation","Biography","Biopic",
           "Comedy","Crime","Documentary","Drama",
@@ -82,7 +82,7 @@ function load_data (filename, is_changed) {
           "#e377c2","#7f7f7f","#25cfc3",
           "#6b6ecf","#637939","#8ca252",
           "#b5cf6b","#8c6d31","#bd9e39",
-          "#e7ba52","#fffb00",
+          "#e7ba52","#3297c9", "#FF6600",
           
           "#d6616b","#E6E6E6","#CCCCCC","#B2B2B2","#dbdb8d",
           "#999999","#808080","#666666","#5d4663",
@@ -99,7 +99,7 @@ function load_data (filename, is_changed) {
     return color
   }}
   var scolors = colorObj(0);
-  var gcolors = colorObj(17);
+  var gcolors = colorObj(18);
   // console.log(colorObj());
   
   //sets random color out of the four ranges 
@@ -346,7 +346,7 @@ function drawStudioLegend() {
 
   var legend = d3.select("#studiolegend").append("svg:svg")
       .attr("width", 1)
-      .attr("height", 17 * (li.h + li.s));
+      .attr("height", 18 * (li.h + li.s));
 
   if (is_changed == 1) {
 	d3.select("#studiolegend").select("svg")
