@@ -8,7 +8,7 @@ html, body {
 }
 h1{
    min-height: 100%;
-  font-size: 5em;
+  font-size: 2em;
     margin:0;
 }
 h2{
@@ -21,13 +21,16 @@ h4{
    min-height: 100%;
   font-size: 1em;
 }
-#container
+
+
+#header, #footer
 { 
   margin-top: 0px;
   background-color: black;
   color: white;
   padding-bottom: 10px;
 }
+
 
 #main {
   width: 100%;
@@ -51,9 +54,9 @@ h4{
 
 #sequence {
   float: left;
-  height: 80px;
   margin-left: 30px;
-  margin-top:0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 #genrelegend, #studiolegend {
@@ -66,8 +69,8 @@ h4{
 }
 
 #chart {
-   position: relative;
-  margin: auto;
+  position: relative;
+  margin: 10px;
 }
 
 #chart path {
@@ -77,13 +80,13 @@ h4{
 
 #explanation {
   position: absolute;
-  color: #666;
-  margin-top: 350px;
+  color: black;
+  margin-top: 200px;
   width: 100%;
 }
 
 #percentage {
-  font-size: 2.5em;
+  font-size: 1.8em;
 }
 #name {
   font-size: 1.5em;
@@ -99,7 +102,7 @@ width: 100%;
   }
     #years a {
       color: white; 
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 300; 
       text-decoration: none;
     }

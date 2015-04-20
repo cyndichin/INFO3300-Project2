@@ -52,15 +52,15 @@
 // Function to load sunburst diagram
 function load_data (filename, is_changed) {
   // SVG dimenstions
-  var width = 780, height = 800, radius = 380;
+  var width = 500, height = 500, radius = 240;
   
   // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
   var b = {
-    w: 250, h: 40, s: 3, t: 10
+    w: 250, h: 25, s: 3, t: 10
   };
 
   var li = {
-    w: 200, h: 30, s: 3, r: 3
+    w: 150, h: 20, s: 3, r: 3
   };
 
   //Colors
@@ -266,7 +266,7 @@ function mouseover(d) {
 function initializeBreadcrumbTrail() {
   // Add the svg area.
   var trail = d3.select("#sequence").append("svg:svg")
-      .attr("width", width)
+      .attr("width", 1000)
       .attr("height", 50)
       .attr("id", "trail");
   // Add the label at the end, for the percentage.
