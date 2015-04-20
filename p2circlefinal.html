@@ -50,7 +50,7 @@
 <script>
 
 // Function to load sunburst diagram
-function load_data (filename) {
+function load_data (filename, is_changed) {
   // SVG dimenstions
   var width = 780, height = 800, radius = 380;
   
@@ -109,12 +109,23 @@ function load_data (filename) {
   var color = d3.scale.ordinal().domain(color_domain).range(color_range);
 
   // Sets svg in chart
-  var vis = d3.select("#chart").append("svg:svg")
-    .attr("width", width)
+    var vis = d3.select("#chart").append("svg:svg")
+    //.attr("width", width)
+    //.attr("height", height)
+	.attr("width", 1)
     .attr("height", height)
     .append("svg:g")
     .attr("id", "container")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+	
+  if(is_changed == 1) {
+	  d3.select("#chart").select("svg").transition()
+	  .attr("width", width)
+	  .duration(1500);
+  }
+  else {
+	d3.select("#chart").select("svg").attr("width", width);
+  }
 
   var partition = d3.layout.partition()
     .sort(null)
@@ -334,15 +345,23 @@ function drawStudioLegend() {
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
 
   var legend = d3.select("#studiolegend").append("svg:svg")
-      .attr("width", li.w)
+      .attr("width", 1)
       .attr("height", 17 * (li.h + li.s));
 
+  if (is_changed == 1) {
+	d3.select("#studiolegend").select("svg")
+	.transition().attr("width", li.w).duration(1500);
+  }
+  else {
+    d3.select("#studiolegend").select("svg").attr("width", li.w);
+  }
+  
   var g = legend.selectAll("g")
       .data(d3.entries(scolors))
             .enter().append("svg:g")
            .attr("transform", function(d, i) {
               return "translate(0," + i * (li.h + li.s) + ")";
-           });
+           })
 
   g.append("svg:rect")
       .attr("rx", li.r)
@@ -362,8 +381,16 @@ function drawStudioLegend() {
 function drawGenreLegend() {
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var legend = d3.select("#genrelegend").append("svg:svg")
-      .attr("width", li.w)
+      .attr("width", 1)
       .attr("height", 18 * (li.h + li.s));
+	  
+  if (is_changed == 1) {
+	d3.select("#genrelegend").select("svg")
+	.transition().attr("width", li.w).duration(1500);
+  }
+  else {
+    d3.select("#genrelegend").select("svg").attr("width", li.w);
+  }
 
   var g = legend.selectAll("g")
      .data(d3.entries(gcolors))
@@ -401,29 +428,27 @@ function toggleLegend() {
       
     }
     
-    function change_data (year) {
+    function change_data (year, is_changed) {
      d3.select("#chart").select("svg").remove();
      d3.select("#studiolegend").select("svg").remove();
      d3.select("#genrelegend").select("svg").remove();
      d3.select("#sequence").select("svg").remove();
-     load_data(year + ".json");
+     load_data((year + ".json"), is_changed);
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
       console.log(year);
       document.getElementById('title').innerHTML = "Movies of " + year;
-
-
     }
-    change_data(2011);
+    change_data(2011, 0);
     
 </script>
     <div id="years">
     <ul>
-      <li><a id="2011" class="" onclick = change_data(2011)>2011</a></li>
-      <li><a id="2010" class="" onclick = change_data(2010)>2010</a></li> 
-      <li><a id="2009" class="" onclick = change_data(2009)>2009</a></li>
-      <li><a id="2008" class="" onclick = change_data(2008)>2008</a></li> 
-      <li><a id="2007" class="" onclick = change_data(2007)>2007</a></li> 
+      <li><a id="2011" class="" onclick = change_data(2011,1)>2011</a></li>
+      <li><a id="2010" class="" onclick = change_data(2010,1)>2010</a></li> 
+      <li><a id="2009" class="" onclick = change_data(2009,1)>2009</a></li>
+      <li><a id="2008" class="" onclick = change_data(2008,1)>2008</a></li> 
+      <li><a id="2007" class="" onclick = change_data(2007,1)>2007</a></li> 
     </ul>           
 </div> 
  <div id ="container">
