@@ -56,7 +56,7 @@
                     "children": [
                         {
                             "name": "Avatar",
-                            "Gross": 2781.5
+                            "Gross": 2781.50
                         },
                         {
                             "name": "X-Men Origins: Wolverine",
@@ -127,7 +127,7 @@
                     ]
                 },
                 {
-                    "name": "Biography",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Notorious",
@@ -226,7 +226,7 @@
                     ]
                 },
                 {
-                    "name": "Crime",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Law Abiding Citizen",
@@ -350,7 +350,7 @@
                     ]
                 },
                 {
-                    "name": "Crime",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "My Bloody Valentine 3-D",
@@ -523,17 +523,12 @@
                     ]
                 },
                 {
-                    "name": "Biography",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Julie & Julia",
                             "Gross": 126.57
-                        }
-                    ]
-                },
-                {
-                    "name": "Documentary",
-                    "children": [
+                        },
                         {
                             "name": "Michael Jackson's This Is It",
                             "Gross": 261.19
@@ -682,11 +677,15 @@
                     ]
                 },
                 {
-                    "name": "Biography",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Public Enemies",
                             "Gross": 214.1
+                        },
+                        {
+                            "name": "State of Play",
+                            "Gross": 88.3
                         }
                     ]
                 },
@@ -731,15 +730,6 @@
                         {
                             "name": "Duplicity",
                             "Gross": 78.14
-                        }
-                    ]
-                },
-                {
-                    "name": "Crime",
-                    "children": [
-                        {
-                            "name": "State of Play",
-                            "Gross": 88.3
                         }
                     ]
                 },
@@ -808,7 +798,7 @@
                     ]
                 },
                 {
-                    "name": "Biography",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "The Blind Side",

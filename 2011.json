@@ -1,38 +1,6 @@
 {
     "children": [
         {
-            "name": "Columbia",
-            "children": [
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "Moneyball",
-                            "Gross": 110.2
-                        }
-                    ]
-                },
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "The Green Hornet",
-                            "Gross": 227.82
-                        }
-                    ]
-                },
-                {
-                    "name": "Thriller",
-                    "children": [
-                        {
-                            "name": "The Ides of March",
-                            "Gross": 75.99
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Disney",
             "children": [
                 {
@@ -305,7 +273,7 @@
                     ]
                 },
                 {
-                    "name": "Fantasy",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Another Earth",
@@ -422,6 +390,81 @@
             "name": "Other Studios",
             "children": [
                 {
+                    "name": "Drama",
+                    "children": [
+                        {
+                            "name": "Moneyball",
+                            "Gross": 110.2
+                        },
+                        {
+                            "name": "The Lincoln Lawyer",
+                            "Gross": 75.01
+                        },
+                        {
+                            "name": "Everything Must Go",
+                            "Gross": 2.71
+                        },
+                        {
+                            "name": "Footloose",
+                            "Gross": 63.54
+                        },
+                        {
+                            "name": "The Beaver",
+                            "Gross": 6.37
+                        }
+                    ]
+                },
+                {
+                    "name": "Action",
+                    "children": [
+                        {
+                            "name": "The Green Hornet",
+                            "Gross": 227.82
+                        },
+                        {
+                            "name": "Conan the Barbarian",
+                            "Gross": 48.8
+                        },
+                        {
+                            "name": "Machine Gun Preacher",
+                            "Gross": 1.1
+                        },
+                        {
+                            "name": "Warrior",
+                            "Gross": 23.06
+                        },
+                        {
+                            "name": "Abduction",
+                            "Gross": 82.09
+                        }
+                    ]
+                },
+                {
+                    "name": "Thriller",
+                    "children": [
+                        {
+                            "name": "The Ides of March",
+                            "Gross": 75.99
+                        },
+                        {
+                            "name": "Tinker Tailor Soldier Spy",
+                            "Gross": 80.63
+                        },
+                        {
+                            "name": "In Time",
+                            "Gross": 173.93
+                        },
+                        {
+                            "name": "Source Code",
+                            "Gross": 147.33
+                        },
+                        {
+                            "name": "Limitless",
+                            "Gross": 161.85
+                        }
+                    ]
+                },
+                {
                     "name": "Animation",
                     "children": [
                         {
@@ -444,27 +487,6 @@
                     ]
                 },
                 {
-                    "name": "Thriller",
-                    "children": [
-                        {
-                            "name": "Tinker Tailor Soldier Spy",
-                            "Gross": 80.63
-                        },
-                        {
-                            "name": "In Time",
-                            "Gross": 173.93
-                        },
-                        {
-                            "name": "Source Code",
-                            "Gross": 147.33
-                        },
-                        {
-                            "name": "Limitless",
-                            "Gross": 161.85
-                        }
-                    ]
-                },
-                {
                     "name": "Comedy",
                     "children": [
                         {
@@ -478,48 +500,6 @@
                         {
                             "name": "The Dilemma",
                             "Gross": 69.72
-                        }
-                    ]
-                },
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "Conan the Barbarian",
-                            "Gross": 48.8
-                        },
-                        {
-                            "name": "Machine Gun Preacher",
-                            "Gross": 1.1
-                        },
-                        {
-                            "name": "Warrior",
-                            "Gross": 23.06
-                        },
-                        {
-                            "name": "Abduction",
-                            "Gross": 82.09
-                        }
-                    ]
-                },
-                {
-                    "name": "Drama",
-                    "children": [
-                        {
-                            "name": "The Lincoln Lawyer",
-                            "Gross": 75.01
-                        },
-                        {
-                            "name": "Everything Must Go",
-                            "Gross": 2.71
-                        },
-                        {
-                            "name": "Footloose",
-                            "Gross": 63.54
-                        },
-                        {
-                            "name": "The Beaver",
-                            "Gross": 6.37
                         }
                     ]
                 },
@@ -943,7 +923,7 @@
                     ]
                 },
                 {
-                    "name": "Fantasy",
+                    "name": "Adventure",
                     "children": [
                         {
                             "name": "Harry Potter and the Deathly Hallows Part 2",

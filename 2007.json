@@ -192,7 +192,7 @@
                     ]
                 },
                 {
-                    "name": "Fantasy",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Mr. Magorium's Wonder Emporium",
@@ -215,11 +215,15 @@
             "name": "Other Studios",
             "children": [
                 {
-                    "name": "Western",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "3:10 to Yuma",
                             "Gross": 70.02
+                        },
+                        {
+                            "name": "Sicko",
+                            "Gross": 36.09
                         }
                     ]
                 },
@@ -281,15 +285,6 @@
                         {
                             "name": "Mr. Brooks",
                             "Gross": 48.12
-                        }
-                    ]
-                },
-                {
-                    "name": "Documentary",
-                    "children": [
-                        {
-                            "name": "Sicko",
-                            "Gross": 36.09
                         }
                     ]
                 }
@@ -489,7 +484,7 @@
                     ]
                 },
                 {
-                    "name": "Biography",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Charlie Wilson's War",
@@ -624,7 +619,7 @@
                     ]
                 },
                 {
-                    "name": "Sci-Fi",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "The Invasion",

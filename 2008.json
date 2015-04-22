@@ -170,7 +170,7 @@
             "name": "Independent",
             "children": [
                 {
-                    "name": "Crime",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Slumdog Millionaire",
@@ -179,6 +179,14 @@
                         {
                             "name": "Saw V",
                             "Gross": 113.86
+                        },
+                        {
+                            "name": "The Express",
+                            "Gross": 9.81
+                        },
+                        {
+                            "name": "Expelled: No Intelligence Allowed",
+                            "Gross": 7.72
                         }
                     ]
                 },
@@ -324,24 +332,6 @@
                             "Gross": 52.66
                         }
                     ]
-                },
-                {
-                    "name": "Biopic",
-                    "children": [
-                        {
-                            "name": "The Express",
-                            "Gross": 9.81
-                        }
-                    ]
-                },
-                {
-                    "name": "Documentary",
-                    "children": [
-                        {
-                            "name": "Expelled: No Intelligence Allowed",
-                            "Gross": 7.72
-                        }
-                    ]
                 }
             ]
         },
@@ -381,11 +371,15 @@
                     ]
                 },
                 {
-                    "name": "Crime",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "In Bruges",
                             "Gross": 33.39
+                        },
+                        {
+                            "name": "Religulous",
+                            "Gross": 13.64
                         },
                         {
                             "name": "Righteous Kill",
@@ -420,6 +414,14 @@
                         {
                             "name": "Punisher: War Zone",
                             "Gross": 10.1
+                        },
+                        {
+                            "name": "The Forbidden Kingdom",
+                            "Gross": 127.98
+                        },
+                        {
+                            "name": "Doomsday",
+                            "Gross": 22.21
                         }
                     ]
                 },
@@ -429,6 +431,10 @@
                         {
                             "name": "The Eye",
                             "Gross": 56.96
+                        },
+                        {
+                            "name": "The Strangers",
+                            "Gross": 82.39
                         }
                     ]
                 },
@@ -471,15 +477,10 @@
                         {
                             "name": "Soul Men",
                             "Gross": 12.33
-                        }
-                    ]
-                },
-                {
-                    "name": "Documentary",
-                    "children": [
+                        },
                         {
-                            "name": "Religulous",
-                            "Gross": 13.64
+                            "name": "Burn After Reading",
+                            "Gross": 163.72
                         }
                     ]
                 },
@@ -557,7 +558,7 @@
                     ]
                 },
                 {
-                    "name": "Fantasy",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "The Spiderwick Chronicles",
@@ -584,42 +585,6 @@
                         {
                             "name": "Stop-Loss",
                             "Gross": 11.21
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Relativity Media",
-            "children": [
-                {
-                    "name": "Comedy",
-                    "children": [
-                        {
-                            "name": "Burn After Reading",
-                            "Gross": 163.72
-                        }
-                    ]
-                },
-                {
-                    "name": "Horror",
-                    "children": [
-                        {
-                            "name": "The Strangers",
-                            "Gross": 82.39
-                        }
-                    ]
-                },
-                {
-                    "name": "Action",
-                    "children": [
-                        {
-                            "name": "The Forbidden Kingdom",
-                            "Gross": 127.98
-                        },
-                        {
-                            "name": "Doomsday",
-                            "Gross": 22.21
                         }
                     ]
                 }
@@ -671,7 +636,7 @@
                     ]
                 },
                 {
-                    "name": "Crime",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "21",
@@ -680,6 +645,10 @@
                         {
                             "name": "Lakeview Terrace",
                             "Gross": 44.65
+                        },
+                        {
+                            "name": "Cadillac Records",
+                            "Gross": 8.88
                         }
                     ]
                 },
@@ -711,15 +680,6 @@
                         {
                             "name": "Quarantine",
                             "Gross": 41.32
-                        }
-                    ]
-                },
-                {
-                    "name": "Biography",
-                    "children": [
-                        {
-                            "name": "Cadillac Records",
-                            "Gross": 8.88
                         }
                     ]
                 }
@@ -833,7 +793,7 @@
                     ]
                 },
                 {
-                    "name": "Biography",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Milk",
@@ -944,11 +904,15 @@
                     ]
                 },
                 {
-                    "name": "Fantasy",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "The Curious Case of Benjamin Button",
                             "Gross": 333.93
+                        },
+                        {
+                            "name": "Pride & Glory",
+                            "Gross": 31.15
                         }
                     ]
                 },
@@ -958,15 +922,6 @@
                         {
                             "name": "One Missed Call",
                             "Gross": 45.85
-                        }
-                    ]
-                },
-                {
-                    "name": "Crime",
-                    "children": [
-                        {
-                            "name": "Pride & Glory",
-                            "Gross": 31.15
                         }
                     ]
                 }
