@@ -76,6 +76,19 @@ function load_data (filename, is_changed) {
           "Fantasy","Genre","Horror","Musical",
           "Mystery","Romance","Sci-Fi","Thriller",
           "Western"];
+	
+  var studios = ["Columbia","Disney","DreamWorks",
+          "Fox", "Happy Madison","Independent",
+          "Legendary Pictures","MGM","Paramount",
+          "Pixar","Relativity Media","Sony",
+          "Spyglass Entertainment", "Summit","The Weinstein Company",
+          "Universal","Warner Bros.", "Other Studios"];	
+  
+  var genres = ["Action","Adventure","Animation","Biography","Biopic",
+          "Comedy","Crime","Documentary","Drama",
+          "Fantasy","Genre","Horror","Musical",
+          "Mystery","Romance","Sci-Fi","Thriller",
+          "Western"];
         
   var color_range = ["#ffbb78","#98df8a","#d62728",
           "#9467bd","#3b3ef6","#613b10",
@@ -155,6 +168,8 @@ function load_data (filename, is_changed) {
     .attr("class", "tooltip")       
     .style("opacity", 0);
 
+	var films = [];
+	var films_color = [];
     var path = vis.datum(preppedData).selectAll("path")
       .data(partition.nodes)
       .enter().append("path")
@@ -163,17 +178,34 @@ function load_data (filename, is_changed) {
       .attr("class", function(d) { return (d.children ? d : d.parent).name; })
       .style("stroke", "#fff")
       .style("fill", function(d) { 
-        var the_name = ((d.children ? d : d.parent).name);
-        var found = $.inArray(the_name, d) > -1
-        if(the_name != null) {
+        var the_name = d.name;
+        if(studios.indexOf(the_name) > -1) {
           return color(the_name);
         }
         else {
-          return random_color(the_name);
-        }
+          if(genres.indexOf(the_name) > -1) {
+			for(var i = 0; i < d.children.length; i++) {
+				films.push(d.children[i].name);
+				films_color.push(color(the_name));
+			}
+			return color(the_name);
+		  }		  
+		  else {
+			return films_color[films.indexOf(the_name)];
+		  }
+		}
       })
-        .style("fill-rule", "evenodd")
-        .on("mouseover", mouseover);
+      .style("fill-rule", "evenodd")
+	  .style("opacity", function(d) {
+		var the_name = d.name; 
+		if(color_domain.indexOf(the_name) > -1) {
+			return 1;
+		}
+		else {
+			return 0.5;
+		}
+		})
+      .on("mouseover", mouseover);
 
     d3.select("#container").on("mouseleave", mouseleave);
     totalSize = path.node().__data__.value;
@@ -224,7 +256,14 @@ function mouseover(d) {
   d3.selectAll("path")
       .transition()
       .duration(1000)
-      .style("opacity", 1)
+      .style("opacity", function(d) {
+		if(d.children != null) {
+			return 1; 
+		}
+		else {
+			return 0.5;
+		}
+	  })
       .each("end", function() {
               d3.select(this).on("mouseover", mouseover);
             });
@@ -303,7 +342,7 @@ function updateBreadcrumbs(nodeArray, percentageString) {
   entering.append("svg:polygon")
       .attr("points", breadcrumbPoints)
       .style("fill", function(d) { 
-        var the_name = ((d.children ? d : d.parent).name);
+        var the_name = d.name;
         if(color_domain.indexOf(the_name) > -1) {
           return color(the_name);
         }
