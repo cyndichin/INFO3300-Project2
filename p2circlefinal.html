@@ -229,7 +229,7 @@ function mouseover(d) {
   }
   var rev = round(revenue);
   var total = "$" + totalSize; 
-  var revenueString = "( " + rev + " out of " + total + " in millions)";
+  var revenueString = "( " + rev + " out of " + round(total) + " in millions)";
   
   d3.select("#percentage")
       .text(percentageString);
