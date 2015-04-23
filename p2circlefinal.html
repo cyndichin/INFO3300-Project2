@@ -38,10 +38,10 @@
     <div id="main">
       <div id="chart">
         <div id="explanation" style="visibility: hidden;">
-          <span id="percentage"></span><br/>
-          of gross revenue for <br/>
-          <span id="name"></span><br/>
-          out of the total.
+          <span id="percentage" style="font-weight: bold; font-size: 25pt"></span><br/>
+          <span id="revenue" style="font-size: 14pt"></span><br/>
+		  of gross revenue for <br/>
+          <span id="name" style="font-weight: bold; font-size: 14pt"></span><br/>
         </div>
       </div>
          <div id="sequence"></div>
@@ -216,14 +216,31 @@ function mouseover(d) {
   if (percentage < 0.1) {
     percentageString = "< 0.1%";
   }
-
+  
+  var revenue = "$" + d.value;
+  function round(num) {
+	var index = num.indexOf(".");
+	if (index + 3 < num.length) {
+		return num.substring(0,index+3);
+	}
+	else {
+		return num; 
+	}
+  }
+  var rev = round(revenue);
+  var total = "$" + totalSize; 
+  var revenueString = "( " + rev + " out of " + total + " in millions)";
+  
   d3.select("#percentage")
       .text(percentageString);
+	  
+  d3.select("#revenue")
+	.text(revenueString);
 
   d3.select("#explanation")
       .style("visibility", "");
 
-    d3.select("#name")
+  d3.select("#name")
       .text(d.name);
 
   var sequenceArray = getAncestors(d);
@@ -343,28 +360,22 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 
   // Add breadcrumb and label for entering nodes.
   var entering = g.enter().append("svg:g");
-
-  var the_films = [];
-  var the_films_color = [];
+  
   entering.append("svg:polygon")
       .attr("points", breadcrumbPoints)
       .style("fill", function(d) { 
-        var the_name = d.name;
+         var the_name = d.name;
         if(studios.indexOf(the_name) > -1) {
           return color(the_name);
         }
         else {
           if(genres.indexOf(the_name) > -1) {
-      for(var i = 0; i < d.children.length; i++) {
-        the_films.push(d.children[i].name);
-        the_films_color.push(color(the_name));
-      }
-      return color(the_name);
-      }     
-      else {
-      return the_films_color[the_films.indexOf(the_name)];
-      }
-    }
+			return color(the_name);
+		  }     
+		  else {
+			return films_color[films.indexOf(the_name)];
+		  }
+		}
       })
     .style("opacity", function(d) {
     var the_name = d.name; 
@@ -519,12 +530,14 @@ function toggleLegend() {
       <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
       <h4>Our Story: By hovering over the studios in the center, you can see
 	  the percentage of worldwide gross each studio made out of all the 
-	  studios' worldwide gross. For each studio, it's outer layer represents the 
-	  types of genres of the films the studio produced for that year. If you hover 
-	  over the genres, you will see the percentage of the gross for that studio that 
-	  they earned from that genre. The outermost layer represents the films in that genre
+	  studios' worldwide gross and the total revenue of all the studios. 
+	  For each studio, it's outer layer represents the  types of genres of the 
+	  films the studio produced for that year. If you hover 
+	  over the genres, you will see the percentage of the gross that genre earned 
+	  for the studio out of the total revenue. 
+	  The outermost layer represents the films in that genre
 	  for the studio. If you hover over the films, you will see the percentage of the
-	  gross for that studio for that genre that the film earn.</h4>
+	  gross that the film earn out of the total revenue.</h4>
 </div>
 
  
