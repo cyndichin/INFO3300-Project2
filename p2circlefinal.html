@@ -159,6 +159,10 @@ function load_data (filename, is_changed) {
   drawStudioLegend();
   // d3.select("#togglelegend").on("click", toggleLegend);
 
+  vis.append("svg:circle")
+	 .attr("r", radius)
+	 .style("opacity", 0);
+  
   var div = d3.select("body").append("div") 
     .attr("class", "tooltip")       
     .style("opacity", 0);
