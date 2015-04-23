@@ -231,7 +231,13 @@ function mouseover(d) {
 
   // Fade all the segments.
   d3.selectAll("path")
-      .style("opacity", 0.3);
+      .style("opacity", 0.25);
+
+  // Weak highlight on movies of the same Genre:
+  // Escape periods in selector string (Warner Bros.)
+  var className = this.getAttribute("class").replace(".","\\.");
+  //Highlight same class
+  d3.selectAll("."+className).style("opacity", 0.6);
 
   // Then highlight only those that are an ancestor of the current segment.
   vis.selectAll("path")
