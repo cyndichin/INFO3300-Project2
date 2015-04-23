@@ -659,7 +659,7 @@
                     ]
                 },
                 {
-                    "name": "Mystery",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "The Ghost Writer",
@@ -673,11 +673,15 @@
             "name": "Universal",
             "children": [
                 {
-                    "name": "Fantasy",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Charlie St. Cloud",
                             "Gross": 48.188
+                        },
+                        {
+                            "name": "The American",
+                            "Gross": 67.875
                         }
                     ]
                 },
@@ -725,15 +729,6 @@
                         {
                             "name": "Scott Pilgrim vs. the World",
                             "Gross": 47.66
-                        }
-                    ]
-                },
-                {
-                    "name": "Other",
-                    "children": [
-                        {
-                            "name": "The American",
-                            "Gross": 67.875
                         }
                     ]
                 },

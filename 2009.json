@@ -501,11 +501,19 @@
                     ]
                 },
                 {
-                    "name": "Mystery",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Angels & Demons",
                             "Gross": 485.9
+                        },
+                        {
+                            "name": "Julie & Julia",
+                            "Gross": 126.57
+                        },
+                        {
+                            "name": "Michael Jackson's This Is It",
+                            "Gross": 261.19
                         },
                         {
                             "name": "The Stepfather",
@@ -519,19 +527,6 @@
                         {
                             "name": "Cloudy with a Chance of Meatballs",
                             "Gross": 243.03
-                        }
-                    ]
-                },
-                {
-                    "name": "Other",
-                    "children": [
-                        {
-                            "name": "Julie & Julia",
-                            "Gross": 126.57
-                        },
-                        {
-                            "name": "Michael Jackson's This Is It",
-                            "Gross": 261.19
                         }
                     ]
                 },
@@ -686,6 +681,14 @@
                         {
                             "name": "State of Play",
                             "Gross": 88.3
+                        },
+                        {
+                            "name": "The Fourth Kind",
+                            "Gross": 47.7
+                        },
+                        {
+                            "name": "A Perfect Getaway",
+                            "Gross": 22.83
                         }
                     ]
                 },
@@ -730,19 +733,6 @@
                         {
                             "name": "Duplicity",
                             "Gross": 78.14
-                        }
-                    ]
-                },
-                {
-                    "name": "Mystery",
-                    "children": [
-                        {
-                            "name": "The Fourth Kind",
-                            "Gross": 47.7
-                        },
-                        {
-                            "name": "A Perfect Getaway",
-                            "Gross": 22.83
                         }
                     ]
                 }
