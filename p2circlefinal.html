@@ -65,7 +65,7 @@ function load_data (filename, is_changed) {
   };
 
   //Colors
-   var color_domain = ["Columbia","Disney","DreamWorks",
+   var color_domain = ["Disney","DreamWorks",
           "Fox", "Happy Madison","Independent",
           "Legendary Pictures","MGM","Paramount",
           "Pixar","Relativity Media","Sony",
@@ -76,7 +76,7 @@ function load_data (filename, is_changed) {
           "Comedy","Drama", "Horror",
       "Romance","Thriller","Other"];
   
-  var studios = ["Columbia","Disney","DreamWorks",
+  var studios = ["Disney","DreamWorks",
           "Fox", "Happy Madison","Independent",
           "Legendary Pictures","MGM","Paramount",
           "Pixar","Relativity Media","Sony",
@@ -87,7 +87,7 @@ function load_data (filename, is_changed) {
           "Comedy","Drama", "Horror",
       "Romance","Thriller","Other"];
         
-  var color_range = ["#ffbb78","#98df8a","#d62728",
+  var color_range = ["#98df8a","#d62728",
           "#9467bd","#3b3ef6","#613b10",
           "#e377c2","#7f7f7f","#25cfc3",
           "#6b6ecf","#637939","#8ca252",
@@ -410,7 +410,7 @@ function drawStudioLegend() {
 
   var legend = d3.select("#studiolegend").append("svg:svg")
       .attr("width", 1)
-      .attr("height", 18 * (li.h + li.s));
+      .attr("height", 17 * (li.h + li.s));
 
   if (is_changed == 1) {
   d3.select("#studiolegend").select("svg")
