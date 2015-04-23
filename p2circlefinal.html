@@ -491,7 +491,7 @@ function toggleLegend() {
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
       console.log(year);
-      document.getElementById('title').innerHTML = "Movies of " + year;
+      document.getElementById('title').innerHTML = "Studio's percentage of gross in " + year;
     }
     change_data(2011, 0);
     
@@ -507,8 +507,14 @@ function toggleLegend() {
 </div> 
  <div id ="footer">
       <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
-      <h4>Our Story</h4>
-      <p>The chart below displays the amount of </p>
+      <h4>Our Story: By hovering over the studios in the center, you can see
+	  the percentage of worldwide gross each studio made out of all the 
+	  studios' worldwide gross. For each studio, it's outer layer represents the 
+	  types of genres of the films the studio produced for that year. If you hover 
+	  over the genres, you will see the percentage of the gross for that studio that 
+	  they earned from that genre. The outermost layer represents the films in that genre
+	  for the studio. If you hover over the films, you will see the percentage of the
+	  gross for that studio for that genre that the film earn.</h4>
 </div>
 
  
