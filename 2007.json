@@ -140,11 +140,15 @@
                     ]
                 },
                 {
-                    "name": "Musical",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Stomp the Yard",
                             "Gross": 75.51
+                        },
+                        {
+                            "name": "Mr. Magorium's Wonder Emporium",
+                            "Gross": 69.47
                         }
                     ]
                 },
@@ -188,15 +192,6 @@
                         {
                             "name": "Epic Movie",
                             "Gross": 86.87
-                        }
-                    ]
-                },
-                {
-                    "name": "Other",
-                    "children": [
-                        {
-                            "name": "Mr. Magorium's Wonder Emporium",
-                            "Gross": 69.47
                         }
                     ]
                 },
@@ -562,7 +557,7 @@
                     ]
                 },
                 {
-                    "name": "Musical",
+                    "name": "Other",
                     "children": [
                         {
                             "name": "Hairspray",
@@ -571,6 +566,10 @@
                         {
                             "name": "Sweeney Todd: The Demon Barber of Fleet Street",
                             "Gross": 152.52
+                        },
+                        {
+                            "name": "The Invasion",
+                            "Gross": 40.17
                         }
                     ]
                 },
@@ -615,15 +614,6 @@
                         {
                             "name": "The Reaping",
                             "Gross": 62.77
-                        }
-                    ]
-                },
-                {
-                    "name": "Other",
-                    "children": [
-                        {
-                            "name": "The Invasion",
-                            "Gross": 40.17
                         }
                     ]
                 }
