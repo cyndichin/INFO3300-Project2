@@ -210,7 +210,6 @@ function load_data (filename, is_changed) {
     d3.select("#container").on("mouseleave", mouseleave);
     totalSize = path.node().__data__.value;
 
-
 var text = vis.selectAll("text").data(partition.nodes).enter();
     var text = vis.selectAll("text")
     .data(partition.nodes)
@@ -223,7 +222,7 @@ var text = vis.selectAll("text").data(partition.nodes).enter();
     .attr("text-anchor", function(d) {
         return (d.x + d.dx / 2) > Math.PI ? "end" : "start";
       })
-    .attr("dx",function(d) { return move(d);})
+    .attr("dx",function(d) {return move(d, filename);})
 
     .attr("dy", ".2em") // vertical-align
     // If category, return category name, else return the number of projects & ratio
@@ -252,40 +251,71 @@ var text = vis.selectAll("text").data(partition.nodes).enter();
 
 
 
-     // Rotates the text according to its placement in the graph
     function rotate(d) {
-        var multiline = (d.name || "").split(" ").length > 1;
-        var theta = (d.x + (d.dx)/2) * 180 / Math.PI - 90;
-        if(multiline == true){
-           theta = theta -.5;
-        }
-      
-        //Anything on the left hand is rotated differently to prevent upside down words
-        if (theta > 120) {
-            return theta - 180;
-        }
-        else if(d.name === "Other Studios"){
-          return theta - 180;
-        }
-        else {
+
+        // set arr for the years and distance move
+        var arr = ["2011","2010","2009","2008","2007"];
+        var num = [193,193,193,193,193];
+      for (i = 0; i < arr.length; i++){
+        if (filename === arr[i]+".json"){
+          var multiline = (d.name || "").split(" ").length > 1;
+          var theta = (d.x + (d.dx)/2) * 180 / Math.PI - 90;
+          if(multiline == true){
+             theta = theta -.5;
+          }
+        
+          //Anything on the left hand is rotated differently to prevent upside down words
+          if((arr[i] === "2008" || arr[i] === "2010") && d.name === "Other Studios"){
             return theta;
-        }
+          } else if(arr[i] === "2008" && d.name === "Other Studios"){
+            return theta - 180;
+          }
+          else if(arr[i] === "2010" && d.name === "Paramount"){
+            return 285;
+          }
+          else if(arr[i] === "2009" && d.name === "Paramount"){
+            return theta-180;
+          }
+          else if((arr[i] === "2009" || arr[i] === "2007") && d.name === "Other Studios"){
+            return theta;
+          }
+          else if(d.name === "Other Studios"){
+            return theta - 180;
+          }
+          else if (theta > 120) {
+            return theta - 180;
+          }
+          else {
+            return theta;  
+          }
+    }}}
+    // adjusts the positions of the label texts for studios
+    function move(d, filename) {
+      // set arr for the years and distance move
+      var arr = ["2011","2010","2009","2008","2007"];
+      var num = [193,193,193,193,193];
 
-    }
-
-     function move(d) {
-        var theta = (d.x + (d.dx)/2) * 180 / Math.PI - 90;
-        if (theta >= 100) {
+      // loop for each of the years
+      for (i = 0; i < arr.length; i++){
+        if (filename === arr[i]+".json"){
+          var theta = (d.x + (d.dx)/2) * 180 / Math.PI - 90;
+          if (theta >= 100) {
+              return -num[i];
+          }
+          else if(arr[i] === "2011" && d.name === "Other Studios"){
+            return -num[i];
+          }
+          else if(arr[i] === "2010" && d.name === "Paramount"){
+            return -235;
+          }
+          else if(arr[i] === "2009" && (d.name === "Paramount")){
             return -193;
-        }
-         else if(d.name === "Other Studios"){
-          return -193;
-        }
-        else {
-            return 193;
-        }
-
-    }
+          } 
+          else {
+              return num[i];
+          }
+        }}}
+  
 
 // Fade all but the current sequence, and show it in the breadcrumb trail.
 function mouseover(d) {
@@ -586,7 +616,7 @@ function drawGenreLegend() {
       console.log(year);
       document.getElementById('title').innerHTML = "Exploring the Revenue of Hollywood Movies in " + year;
     }
-    change_data(2011, 0);
+    change_data(2010, 0);
     
 </script>
     <div id="years">
