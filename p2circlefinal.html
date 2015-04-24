@@ -22,7 +22,7 @@
       <h1><div id = "title"></div></h1>
 <br>
       <p>Our sunburst chart demonstrates which movies made how much gross revenue for a specific year. The innermost layer is represented by studios. The outer layer for each studio represents the genres of the 
-      films that the studio produced for that year and the outermost layer is the specific films for each of the studio.<br>
+      films that the studio produced for that year and the outermost layer is the specific films for each of the studio. *For best view, zoom out to view the whole data visualization without scrolling.<br>
 
    </div>
 
@@ -109,7 +109,7 @@ function load_data (filename, is_changed) {
     return color
   }}
   var scolors = colorObj(0);
-  var gcolors = colorObj(18);
+  var gcolors = colorObj(17);
   // console.log(colorObj());
   
   //sets random color out of the four ranges 
@@ -159,7 +159,6 @@ function load_data (filename, is_changed) {
   initializeBreadcrumbTrail();
   drawGenreLegend();
   drawStudioLegend();
-  // d3.select("#togglelegend").on("click", toggleLegend);
 
   vis.append("svg:circle")
    .attr("r", radius)
