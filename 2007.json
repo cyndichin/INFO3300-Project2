@@ -140,7 +140,7 @@
                     ]
                 },
                 {
-                    "name": "Other",
+                    "name": "Others",
                     "children": [
                         {
                             "name": "Stomp the Yard",
@@ -210,7 +210,7 @@
             "name": "Other Studios",
             "children": [
                 {
-                    "name": "Other",
+                    "name": "Others",
                     "children": [
                         {
                             "name": "3:10 to Yuma",
@@ -479,7 +479,7 @@
                     ]
                 },
                 {
-                    "name": "Other",
+                    "name": "Others",
                     "children": [
                         {
                             "name": "Charlie Wilson's War",
