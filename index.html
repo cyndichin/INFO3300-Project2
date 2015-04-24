@@ -6,8 +6,7 @@
     <!-- Script Libraries -->
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="underscore-min.js" type="text/javascript"></script>
-    <script src="underscore.string.min.js" type="text/javascript"></script>
+
     
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css"
@@ -379,7 +378,7 @@ function load_data (filename, is_changed) {
 	  // Weak highlight on movies of the same Genre:
 	  // Escape periods in selector string (Warner Bros.)
 	  var className = this.getAttribute("class").replace(".","\\.");
-	  d3.selectAll("."+className).style("opacity", 1);
+	  d3.selectAll("."+className).style("opacity", .8);
 
 	  // Then highlight only those that are an ancestor of the current segment.
 	  the_svg.selectAll("path")
