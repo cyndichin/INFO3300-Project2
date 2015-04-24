@@ -7,7 +7,6 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
@@ -29,11 +28,6 @@
 	  to view the whole data visualization without scrolling.<br>
 
    </div>
-
-    <div id="sidebar1">
-      <h2>Studio Names</h2>
-      <div id="studiolegend"></div>
-    </div>
       
     <div id="sidebar">
        <h2>Movie Genres</h2>
@@ -42,7 +36,21 @@
       
     <!-- Visualization Container -->
     <div id="main">
-      <div id="chart">
+
+   <div id="sidebar1">
+   	<h2>Select a Year:</h2><br>
+	    <div id="years">
+	    <ul>
+	      <li><a id="2011" class="selected" onclick = change_data(2011,1)>2011</a></li>
+	      <li><a id="2010" class="" onclick = change_data(2010,1)>2010</a></li> 
+	      <li><a id="2009" class="" onclick = change_data(2009,1)>2009</a></li>
+	      <li><a id="2008" class="" onclick = change_data(2008,1)>2008</a></li> 
+	      <li><a id="2007" class="" onclick = change_data(2007,1)>2007</a></li> 
+	    </ul>           
+		</div> 
+    </div> 
+    <div id="chart">
+    	<!-- center texts -->
         <div id="explanation" style="visibility: hidden;">
           <span id="percentage" style="font-weight: bold; font-size: 25pt"></span><br/>
           <div id="revenue"></div>
@@ -65,7 +73,7 @@ function load_data (filename, is_changed) {
   
   //Trail dimensions: width, height, spacing, width of tip/tail.
   var b = {
-    w: 300, h: 40, s: 3, t: 10
+    w: 400, h: 40, s: 3, t: 10
   };
 
   var li = {
@@ -179,7 +187,7 @@ function load_data (filename, is_changed) {
 	//initializing objects/data
 	initializeTrail();
 	drawGenreLegend();
-	drawStudioLegend();
+	// drawStudioLegend();
 
     the_svg.append("svg:circle")
     .attr("r", radius)
@@ -444,7 +452,7 @@ function load_data (filename, is_changed) {
 	function initializeTrail() {
 	  // Add the svg area.
 	  var trail = d3.select("#sequence").append("svg:svg")
-		  .attr("width", 1000)
+		  .attr("width", 10000)
 		  .attr("height", 50)
 		  .attr("id", "trail");
 	  // Add the label at the end, for the percentage.
@@ -509,8 +517,15 @@ function load_data (filename, is_changed) {
 		  .attr("y", b.h / 2)
 		  .attr("dy", "0.35em")
 		  .attr("text-anchor", "middle")
-		  .text(function(d) { return d.name; });
-
+		  .text(function(d) { return d.name; })
+		  .style("fill", function(d) { 
+		  		if(d.depth === 1 ){
+		  			return "white";
+		  		}else{
+		  			return "black";
+		  		}
+		  	});
+	
 	  // Set position for entering and updating nodes.
 	  g.attr("transform", function(d, i) {
 		return "translate(" + i * (b.w + b.s) + ", 0)";
@@ -621,18 +636,11 @@ function load_data (filename, is_changed) {
 		  console.log(year);
 		  document.getElementById('title').innerHTML = "Exploring the Revenue of Hollywood Movies in " + year;
 	}
-	change_data(2010, 0);
+	change_data(2011, 0);
     
 </script>
-    <div id="years">
-    <ul>
-      <li><a id="2011" class="selected" onclick = change_data(2011,1)>2011</a></li>
-      <li><a id="2010" class="" onclick = change_data(2010,1)>2010</a></li> 
-      <li><a id="2009" class="" onclick = change_data(2009,1)>2009</a></li>
-      <li><a id="2008" class="" onclick = change_data(2008,1)>2008</a></li> 
-      <li><a id="2007" class="" onclick = change_data(2007,1)>2007</a></li> 
-    </ul>           
-</div> 
+
+
  <div id ="footer">
   <p>
     <br>
