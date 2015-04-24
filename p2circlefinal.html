@@ -39,8 +39,8 @@
       <div id="chart">
         <div id="explanation" style="visibility: hidden;">
           <span id="percentage" style="font-weight: bold; font-size: 25pt"></span><br/>
-          <span id="revenue" style="font-size: 14pt"></span><br/>
-		  of gross revenue for <br/>
+          <div id="revenue"></div>
+      of gross revenue for <br/>
           <span id="name" style="font-weight: bold; font-size: 14pt"></span><br/>
         </div>
       </div>
@@ -57,7 +57,7 @@ function load_data (filename, is_changed) {
   
   // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
   var b = {
-    w: 250, h: 40, s: 3, t: 10
+    w: 400, h: 40, s: 3, t: 10
   };
 
   var li = {
@@ -160,8 +160,8 @@ function load_data (filename, is_changed) {
   // d3.select("#togglelegend").on("click", toggleLegend);
 
   vis.append("svg:circle")
-	 .attr("r", radius)
-	 .style("opacity", 0);
+   .attr("r", radius)
+   .style("opacity", 0);
   
   var div = d3.select("body").append("div") 
     .attr("class", "tooltip")       
@@ -208,6 +208,84 @@ function load_data (filename, is_changed) {
 
     d3.select("#container").on("mouseleave", mouseleave);
     totalSize = path.node().__data__.value;
+
+
+var text = vis.selectAll("text").data(partition.nodes).enter();
+    var text = vis.selectAll("text")
+    .data(partition.nodes)
+    .enter().append("text")
+    .attr("transform", function(d) { 
+      return "rotate(" + rotate(d) + ")"; })
+    // .attr("x", function(d) {return placement(d)})
+    .attr("font-size", "12px")
+  .style("fill", "white")
+    .attr("text-anchor", function(d) {
+        return (d.x + d.dx / 2) > Math.PI ? "end" : "start";
+      })
+    .attr("dx",function(d) { return move(d);})
+
+    .attr("dy", ".2em") // vertical-align
+    // If category, return category name, else return the number of projects & ratio
+    .text(
+      function(d) {
+        if(d.depth === 1){
+        if(d.name === "The Weinstein Company"){
+          return "Weinstein";
+        }else if (d.name === "Relativity Media"){
+          return "Reliativity M.";
+
+        }else if (d.name === "Other Studios"){
+          return "Others";
+
+        }else if (d.name === "Legendary Pictures"){
+          return "Legendary P.";
+
+        }else if (d.name === "Happy Madison"){
+          return "Happy Madi.";
+        }
+        else{
+          return d.name; 
+        }
+           
+    }});
+
+
+
+     // Rotates the text according to its placement in the graph
+    function rotate(d) {
+        var multiline = (d.name || "").split(" ").length > 1;
+        var theta = (d.x + (d.dx)/2) * 180 / Math.PI - 90;
+        if(multiline == true){
+           theta = theta -.5;
+        }
+      
+        //Anything on the left hand is rotated differently to prevent upside down words
+        if (theta > 120) {
+            return theta - 180;
+        }
+        else if(d.name === "Other Studios"){
+          return theta - 180;
+        }
+        else {
+            return theta;
+        }
+
+    }
+
+     function move(d) {
+        var theta = (d.x + (d.dx)/2) * 180 / Math.PI - 90;
+        if (theta >= 100) {
+            return -193;
+        }
+         else if(d.name === "Other Studios"){
+          return -193;
+        }
+        else {
+            return 193;
+        }
+
+    }
+
 // Fade all but the current sequence, and show it in the breadcrumb trail.
 function mouseover(d) {
 
@@ -219,13 +297,13 @@ function mouseover(d) {
   
   var revenue = "$" + d.value;
   function round(num) {
-	var index = num.indexOf(".");
-	if (index + 3 < num.length) {
-		return num.substring(0,index+3);
-	}
-	else {
-		return num; 
-	}
+  var index = num.indexOf(".");
+  if (index + 3 < num.length) {
+    return num.substring(0,index+3);
+  }
+  else {
+    return num; 
+  }
   }
   var rev = round(revenue);
   var total = "$" + totalSize; 
@@ -233,9 +311,9 @@ function mouseover(d) {
   
   d3.select("#percentage")
       .text(percentageString);
-	  
+    
   d3.select("#revenue")
-	.text(revenueString);
+  .text(revenueString);
 
   d3.select("#explanation")
       .style("visibility", "");
@@ -254,7 +332,7 @@ function mouseover(d) {
   // Escape periods in selector string (Warner Bros.)
   var className = this.getAttribute("class").replace(".","\\.");
   //Highlight same class
-  d3.selectAll("."+className).style("opacity", 0.6);
+  d3.selectAll("."+className).style("opacity", 1);
 
   // Then highlight only those that are an ancestor of the current segment.
   vis.selectAll("path")
@@ -370,12 +448,12 @@ function updateBreadcrumbs(nodeArray, percentageString) {
         }
         else {
           if(genres.indexOf(the_name) > -1) {
-			return color(the_name);
-		  }     
-		  else {
-			return films_color[films.indexOf(the_name)];
-		  }
-		}
+      return color(the_name);
+      }     
+      else {
+      return films_color[films.indexOf(the_name)];
+      }
+    }
       })
     .style("opacity", function(d) {
     var the_name = d.name; 
@@ -489,13 +567,6 @@ function drawGenreLegend() {
       .text(function(d) { return d.key; });
 }
 
-function toggleLegend() {
-  var legend = d3.select("#legend");
-  if (legend.style("visibility") == "hidden") {
-    legend.style("visibility", "");
-  } else {
-    legend.style("visibility", "hidden");
-  }}
 
 
       });
@@ -529,15 +600,15 @@ function toggleLegend() {
  <div id ="footer">
       <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
       <h4>Our Story: By hovering over the studios in the center, you can see
-	  the percentage of worldwide gross each studio made out of all the 
-	  studios' worldwide gross and the total revenue of all the studios. 
-	  For each studio, it's outer layer represents the  types of genres of the 
-	  films the studio produced for that year. If you hover 
-	  over the genres, you will see the percentage of the gross that genre earned 
-	  for the studio out of the total revenue. 
-	  The outermost layer represents the films in that genre
-	  for the studio. If you hover over the films, you will see the percentage of the
-	  gross that the film earn out of the total revenue.</h4>
+    the percentage of worldwide gross each studio made out of all the 
+    studios' worldwide gross and the total revenue of all the studios. 
+    For each studio, it's outer layer represents the  types of genres of the 
+    films the studio produced for that year. If you hover 
+    over the genres, you will see the percentage of the gross that genre earned 
+    for the studio out of the total revenue. 
+    The outermost layer represents the films in that genre
+    for the studio. If you hover over the films, you will see the percentage of the
+    gross that the film earn out of the total revenue.</h4>
 </div>
 
  
