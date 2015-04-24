@@ -102,50 +102,46 @@ p{
   font-size: 1.5em;
 }
 
-#revenue{
-
-}
- 
-    #years {
-        font-family: 'Arial', sans-serif;
-        background-color: black;
+#years {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
 /*position: fixed;*/
 width: 100%;
-    
-  }
-    #years a {
-      color: white; 
-      font-size: 2rem;
-      font-weight: 300; 
-      text-decoration: none;
-    }
 
-   #years ul {
-      margin: 0;
-      background-color: black;
-      display: inline-block;
-    }
-   #years li {
-      display: inline-block;
-      padding: 25px 25px;
-      list-style-type: none;
-    }
-    ul li a {
-      background: #000;
-      text-decoration: none;
-    }
+}
+#years a {
+  color: white; 
+  font-size: 2rem;
+  font-weight: 300; 
+  text-decoration: none;
+}
 
-    ul li a:hover{
-      border-bottom: solid #fff;
-      cursor: pointer;
-    }
+#years ul {
+  margin: 0;
+  background-color: black;
+  display: inline-block;
+}
+#years li {
+  display: inline-block;
+  padding: 25px 25px;
+  list-style-type: none;
+}
+ul li a {
+  background: #000;
+  text-decoration: none;
+}
 
-  #years .selected{
-    border-bottom: solid #fff;
+ul li a:hover{
+  border-bottom: solid #fff;
+  cursor: pointer;
+}
 
-  }
+#years .selected{
+border-bottom: solid #fff;
 
-  input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
+}
+
+input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
 cursor:pointer;
 -webkit-border-radius: 5px;
 border-radius: 5px; }
