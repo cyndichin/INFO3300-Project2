@@ -13,16 +13,19 @@
     <link rel="stylesheet" type="text/css"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
     <link rel="stylesheet" type="text/css" href="styles.css"> 
-    <title>Success of Movies</title>
+    <title>INFO / CS 3300 Project</title>
   </head>
   <body>
    
     <!-- Top Containter -->
     <div id ="header">
       <h1><div id = "title"></div></h1>
-    </div>
+<br>
+      <p>Our sunburst chart demonstrates which movies made how much gross revenue for a specific year. The innermost layer is represented by studios. The outer layer for each studio represents the genres of the 
+      films that the studio produced for that year and the outermost layer is the specific films for each of the studio.<br>
 
-        
+   </div>
+
     <div id="sidebar1">
       <h2>Studio Names</h2>
       <div id="studiolegend"></div>
@@ -33,7 +36,6 @@
       <div id="genrelegend"></div>
     </div>
       
-
     <!-- Visualization Container -->
     <div id="main">
       <div id="chart">
@@ -41,7 +43,7 @@
           <span id="percentage" style="font-weight: bold; font-size: 25pt"></span><br/>
           <div id="revenue"></div>
       of gross revenue for <br/>
-          <span id="name" style="font-weight: bold; font-size: 14pt"></span><br/>
+          <span id="name" style="font-weight: bold; font-size: 12pt"></span><br/>
         </div>
       </div>
          <div id="sequence"></div>
@@ -57,7 +59,7 @@ function load_data (filename, is_changed) {
   
   // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
   var b = {
-    w: 400, h: 40, s: 3, t: 10
+    w: 300, h: 40, s: 3, t: 10
   };
 
   var li = {
@@ -307,7 +309,7 @@ function mouseover(d) {
   }
   var rev = round(revenue);
   var total = "$" + totalSize; 
-  var revenueString = "( " + rev + " out of " + round(total) + " in millions)";
+  var revenueString = "(" + rev + " out of " + round(total) + " in millions)";
   
   d3.select("#percentage")
       .text(percentageString);
@@ -583,14 +585,14 @@ function drawGenreLegend() {
       $("a").removeClass("selected");
       $("#"+year).addClass("selected");
       console.log(year);
-      document.getElementById('title').innerHTML = "Studio's Percentage Of Gross In " + year;
+      document.getElementById('title').innerHTML = "Exploring the Revenue of Hollywood Movies in " + year;
     }
     change_data(2011, 0);
     
 </script>
     <div id="years">
     <ul>
-      <li><a id="2011" class="" onclick = change_data(2011,1)>2011</a></li>
+      <li><a id="2011" class="selected" onclick = change_data(2011,1)>2011</a></li>
       <li><a id="2010" class="" onclick = change_data(2010,1)>2010</a></li> 
       <li><a id="2009" class="" onclick = change_data(2009,1)>2009</a></li>
       <li><a id="2008" class="" onclick = change_data(2008,1)>2008</a></li> 
@@ -598,17 +600,15 @@ function drawGenreLegend() {
     </ul>           
 </div> 
  <div id ="footer">
-      <h2>Cyndi Chin, Jessica Lee, Thomas Perz</h2>
-      <h4>Our Story: By hovering over the studios in the center, you can see
-    the percentage of worldwide gross each studio made out of all the 
-    studios' worldwide gross and the total revenue of all the studios. 
-    For each studio, it's outer layer represents the  types of genres of the 
-    films the studio produced for that year. If you hover 
-    over the genres, you will see the percentage of the gross that genre earned 
-    for the studio out of the total revenue. 
-    The outermost layer represents the films in that genre
-    for the studio. If you hover over the films, you will see the percentage of the
-    gross that the film earn out of the total revenue.</h4>
+  <p>
+    <br>
+    Navigation: 
+<br>1. Click on the different years to view the revenues of studios from years 2007 to 2011.
+<br>2. Hover over the studios to see the percentage (%) of worldwide gross revenue that each studio made out of the total gross revenue of the studios for that year. 
+<br>3. Hover over the genres to see the percentage (%) of the gross revenue out of the total revenue. Hovering over one genre of a specific studio will also highlights of films with the same genre of a different studio. 
+<br>4. Hover over the films to see the percentage (%) of the
+    gross revenue that the film earn out of the total revenue that all the studios made.</p><br></p>
+    <h2>Cyndi Chin (cgc95), Jessica Lee, Thomas Perz</h2><br>
 </div>
 
  
